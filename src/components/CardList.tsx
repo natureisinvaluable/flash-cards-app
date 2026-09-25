@@ -1,5 +1,6 @@
 import type { AppData, Card } from '../types'
 import { sortedCategories } from '../storage'
+import { cardMatches } from '../search'
 import { ColouredText } from './ColouredText'
 
 /**
@@ -10,19 +11,44 @@ import { ColouredText } from './ColouredText'
  */
 export function CardList({
   data,
+  search,
   onEdit,
   onMove,
 }: {
   data: AppData
+  search: string
   onEdit: (card: Card) => void
   onMove: (card: Card, categoryId: string) => void
 }) {
   const categories = sortedCategories(data)
+  const matching = data.cards.filter((card) => cardMatches(card, search))
+  const isSearching = search.trim().length > 0
+
+  if (isSearching && matching.length === 0) {
+    return (
+      <p className="empty">
+        No cards match &ldquo;{search.trim()}&rdquo;. Searching ignores accents, so{' '}
+        <em>cao</em> will find <em>c&atilde;o</em>.
+      </p>
+    )
+  }
 
   return (
     <div>
+      {isSearching && (
+        <p className="search-summary">
+          {matching.length} {matching.length === 1 ? 'card matches' : 'cards match'} &ldquo;
+          {search.trim()}&rdquo;
+        </p>
+      )}
+
       {categories.map((category) => {
-        const cards = data.cards.filter((c) => c.categoryId === category.id)
+        const cards = matching.filter((c) => c.categoryId === category.id)
+
+        // While searching, skip categories with nothing in them rather than
+        // padding the results with empty headings.
+        if (isSearching && cards.length === 0) return null
+
         return (
           <section key={category.id} className="category">
             <h2>

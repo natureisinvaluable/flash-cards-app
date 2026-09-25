@@ -7,15 +7,22 @@ import { ColourLegend } from './components/ColourLegend'
 import { BackupPanel } from './components/BackupPanel'
 import { CardEditor } from './components/CardEditor'
 import { CategoryManager } from './components/CategoryManager'
+import { SettingsPanel } from './components/SettingsPanel'
 import { Study } from './components/Study'
 
 type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
+type Panel = 'categories' | 'settings' | 'backup' | null
 
 export default function App() {
   const { data, update, saveFailed } = useAppData()
   const [editing, setEditing] = useState<Editing>(null)
-  const [showCategories, setShowCategories] = useState(false)
+  const [panel, setPanel] = useState<Panel>(null)
   const [studying, setStudying] = useState(false)
+  const [search, setSearch] = useState('')
+
+  function togglePanel(which: Exclude<Panel, null>) {
+    setPanel((open) => (open === which ? null : which))
+  }
 
   function handleSave(english: CardSide, portuguese: CardSide, categoryId: string) {
     if (editing?.mode === 'edit') {
@@ -74,37 +81,79 @@ export default function App() {
           onCancel={() => setEditing(null)}
         />
       ) : (
-        <div className="button-row toolbar">
-          <button type="button" onClick={() => setStudying(true)} disabled={data.cards.length === 0}>
-            Study
-          </button>
-          <button type="button" className="secondary" onClick={() => setEditing({ mode: 'new' })}>
-            Add a card
-          </button>
-          <button
-            type="button"
-            className="secondary"
-            aria-expanded={showCategories}
-            onClick={() => setShowCategories((shown) => !shown)}
-          >
-            {showCategories ? 'Hide categories' : 'Manage categories'}
-          </button>
-        </div>
-      )}
+        <>
+          <div className="button-row toolbar">
+            <button
+              type="button"
+              onClick={() => setStudying(true)}
+              disabled={data.cards.length === 0}
+            >
+              Study
+            </button>
+            <button
+              type="button"
+              className="secondary"
+              onClick={() => setEditing({ mode: 'new' })}
+            >
+              Add a card
+            </button>
+            <button
+              type="button"
+              className="secondary"
+              aria-expanded={panel === 'categories'}
+              onClick={() => togglePanel('categories')}
+            >
+              Categories
+            </button>
+            <button
+              type="button"
+              className="secondary"
+              aria-expanded={panel === 'settings'}
+              onClick={() => togglePanel('settings')}
+            >
+              Settings
+            </button>
+            <button
+              type="button"
+              className="secondary"
+              aria-expanded={panel === 'backup'}
+              onClick={() => togglePanel('backup')}
+            >
+              Backup
+            </button>
+          </div>
 
-      {showCategories && !editing && <CategoryManager data={data} update={update} />}
+          {panel === 'categories' && <CategoryManager data={data} update={update} />}
+          {panel === 'settings' && <SettingsPanel data={data} update={update} />}
+          {panel === 'backup' && (
+            <BackupPanel data={data} onRestore={(restored) => update(() => restored)} />
+          )}
+
+          <div className="search-field">
+            <label className="field-label" htmlFor="search">
+              Search
+            </label>
+            <input
+              id="search"
+              type="search"
+              value={search}
+              placeholder="English or Portuguese&hellip;"
+              onChange={(event) => setSearch(event.target.value)}
+            />
+          </div>
+        </>
+      )}
 
       <ColourLegend meanings={data.colourMeanings} />
 
       <CardList
         data={data}
+        search={editing ? '' : search}
         onEdit={(card) => setEditing({ mode: 'edit', card })}
         onMove={(card, categoryId) =>
           update((current) => setCardCategory(current, card.id, categoryId))
         }
       />
-
-      <BackupPanel data={data} onRestore={(restored) => update(() => restored)} />
 
       <p className="privacy-note">
         Your cards are stored on this device only. Nothing is sent anywhere.

@@ -18,8 +18,11 @@ When something carries a real risk — data loss especially — state it plainly
 
 ## Current state
 
-Not yet implemented. The architecture below is agreed and should be followed when building it.
-Remove this section once the app exists.
+Version 1 is complete and live at https://natureisinvaluable.github.io/flash-cards-app/
+
+Built: the card list, the editor with word colouring and accent buttons, editable categories with
+one-tap re-filing, study mode, search, settings, and backup/restore. See "Deliberately postponed"
+at the bottom for what was left out on purpose.
 
 ## Architecture
 
@@ -145,7 +148,9 @@ Verification is hands-on. Run `npm run dev` and check whatever the change touche
 - Edit a card's text; colours on untouched words survive, none land on the wrong word.
 - Rename a category, add one, delete one — its cards move where you chose; the last category cannot
   be deleted.
-- Search an English word and a Portuguese word; both find the card.
+- Search an English word and a Portuguese word; both find the card. Search ignores case and
+  accents (`src/search.ts`), so `cao` must still find `cão` - the accented words are exactly the
+  ones that are hard to type.
 - Run a study session twice; order differs; filing a card during study shows in the list afterwards.
 - **Download a backup, then restore it** — colours included. This is the app's only safety net.
 - Accent buttons insert the right character at the cursor.

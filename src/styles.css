@@ -654,3 +654,75 @@ button.reveal {
 .study-done p {
   margin-bottom: 1.25rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Search and settings
+   --------------------------------------------------------------------------- */
+
+.search-field {
+  margin-bottom: 1.5rem;
+}
+
+.search-field input {
+  width: 100%;
+  min-height: var(--tap-target);
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.search-field input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.search-summary {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.panel h3 {
+  margin: 1.25rem 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+.panel h3:first-of-type {
+  margin-top: 0;
+}
+
+.colour-settings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colour-settings li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.colour-settings input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: var(--tap-target);
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* The swatch takes its colour from the .colour-* class via currentColor. */
+.colour-settings .swatch {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+}

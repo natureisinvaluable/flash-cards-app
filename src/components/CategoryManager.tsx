@@ -70,6 +70,13 @@ export function CategoryManager({
                   onChange={(event) =>
                     update((current) => renameCategory(current, category.id, event.target.value))
                   }
+                  onBlur={(event) => {
+                    // A blank name would leave an unlabelled button in study
+                    // mode, so give it something rather than allow nothing.
+                    if (event.target.value.trim().length === 0) {
+                      update((current) => renameCategory(current, category.id, 'Untitled'))
+                    }
+                  }}
                 />
                 <span className="count">{cardCount}</span>
                 <button
