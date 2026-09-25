@@ -199,3 +199,96 @@ h1 {
   padding: 0.875rem 1rem;
   margin-bottom: 1.5rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------------- */
+
+button {
+  min-height: var(--tap-target);
+  padding: 0 1.1rem;
+  font: inherit;
+  font-weight: 500;
+  color: var(--surface);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.12);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--card-orange);
+  outline-offset: 2px;
+}
+
+button.secondary {
+  color: var(--accent);
+  background: var(--surface);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Panels, notices and confirmations
+   --------------------------------------------------------------------------- */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.panel-intro {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.notice {
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+}
+
+.notice.warning {
+  background: #fdf1e3;
+  border: 1px solid var(--card-orange);
+}
+
+.notice.success {
+  background: #e9f5ec;
+  border: 1px solid var(--card-green);
+}
+
+.confirm {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--card-orange);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.confirm p {
+  margin: 0 0 0.6rem;
+}
+
+.confirm code {
+  font-size: 0.85rem;
+  word-break: break-all;
+}
