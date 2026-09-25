@@ -1,0 +1,1772 @@
+{
+  "app": "portuguese-flashcards",
+  "exportedAt": "2026-09-25T13:00:00.000Z",
+  "schemaVersion": 2,
+  "cards": [
+    {
+      "id": "starter-ver-present",
+      "english": {
+        "text": "to see\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu vejo\ntu vês\nele vê\nnós vemos\neles veem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ver-past",
+      "english": {
+        "text": "to see\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu vi\ntu viste\nele viu\nnós vimos\neles viram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ver-imperfect",
+      "english": {
+        "text": "to see\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu via\ntu vias\nele via\nnós víamos\neles viam",
+        "spans": [
+          {
+            "start": 27,
+            "end": 29,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-vir-present",
+      "english": {
+        "text": "to come\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu venho\ntu vens\nele vem\nnós vimos\neles vêm",
+        "spans": [
+          {
+            "start": 40,
+            "end": 43,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-vir-past",
+      "english": {
+        "text": "to come\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu vim\ntu vieste\nele veio\nnós viemos\neles vieram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-vir-imperfect",
+      "english": {
+        "text": "to come\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu vinha\ntu vinhas\nele vinha\nnós vínhamos\neles vinham",
+        "spans": [
+          {
+            "start": 33,
+            "end": 35,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-por-present",
+      "english": {
+        "text": "to put (pôr)\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu ponho\ntu pões\nele põe\nnós pomos\neles põem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-por-past",
+      "english": {
+        "text": "to put (pôr)\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu pus\ntu puseste\nele pôs\nnós pusemos\neles puseram",
+        "spans": [
+          {
+            "start": 22,
+            "end": 25,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-por-imperfect",
+      "english": {
+        "text": "to put (pôr)\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu punha\ntu punhas\nele punha\nnós púnhamos\neles punham",
+        "spans": [
+          {
+            "start": 33,
+            "end": 35,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dar-present",
+      "english": {
+        "text": "to give\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dou\ntu dás\nele dá\nnós damos\neles dão",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dar-past",
+      "english": {
+        "text": "to give\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dei\ntu deste\nele deu\nnós demos\neles deram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dar-imperfect",
+      "english": {
+        "text": "to give\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dava\ntu davas\nele dava\nnós dávamos\neles davam",
+        "spans": [
+          {
+            "start": 30,
+            "end": 32,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dizer-present",
+      "english": {
+        "text": "to say, to tell\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu digo\ntu dizes\nele diz\nnós dizemos\neles dizem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dizer-past",
+      "english": {
+        "text": "to say, to tell\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu disse\ntu disseste\nele disse\nnós dissemos\neles disseram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dizer-imperfect",
+      "english": {
+        "text": "to say, to tell\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dizia\ntu dizias\nele dizia\nnós dizíamos\neles diziam",
+        "spans": [
+          {
+            "start": 35,
+            "end": 37,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-trazer-present",
+      "english": {
+        "text": "to bring\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu trago\ntu trazes\nele traz\nnós trazemos\neles trazem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-trazer-past",
+      "english": {
+        "text": "to bring\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu trouxe\ntu trouxeste\nele trouxe\nnós trouxemos\neles trouxeram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-trazer-imperfect",
+      "english": {
+        "text": "to bring\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu trazia\ntu trazias\nele trazia\nnós trazíamos\neles traziam",
+        "spans": [
+          {
+            "start": 39,
+            "end": 41,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sair-present",
+      "english": {
+        "text": "to go out, to leave\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu saio\ntu sais\nele sai\nnós saímos\neles saem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sair-past",
+      "english": {
+        "text": "to go out, to leave\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu saí\ntu saíste\nele saiu\nnós saímos\neles saíram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sair-imperfect",
+      "english": {
+        "text": "to go out, to leave\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu saía\ntu saías\nele saía\nnós saíamos\neles saíam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ouvir-present",
+      "english": {
+        "text": "to hear\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu ouço\ntu ouves\nele ouve\nnós ouvimos\neles ouvem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 7,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ouvir-past",
+      "english": {
+        "text": "to hear\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu ouvi\ntu ouviste\nele ouviu\nnós ouvimos\neles ouviram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ouvir-imperfect",
+      "english": {
+        "text": "to hear\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu ouvia\ntu ouvias\nele ouvia\nnós ouvíamos\neles ouviam",
+        "spans": [
+          {
+            "start": 35,
+            "end": 37,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pedir-present",
+      "english": {
+        "text": "to ask for\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu peço\ntu pedes\nele pede\nnós pedimos\neles pedem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 7,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pedir-past",
+      "english": {
+        "text": "to ask for\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu pedi\ntu pediste\nele pediu\nnós pedimos\neles pediram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pedir-imperfect",
+      "english": {
+        "text": "to ask for\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu pedia\ntu pedias\nele pedia\nnós pedíamos\neles pediam",
+        "spans": [
+          {
+            "start": 35,
+            "end": 37,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-perder-present",
+      "english": {
+        "text": "to lose\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu perco\ntu perdes\nele perde\nnós perdemos\neles perdem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 8,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-perder-past",
+      "english": {
+        "text": "to lose\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu perdi\ntu perdeste\nele perdeu\nnós perdemos\neles perderam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-perder-imperfect",
+      "english": {
+        "text": "to lose\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu perdia\ntu perdias\nele perdia\nnós perdíamos\neles perdiam",
+        "spans": [
+          {
+            "start": 39,
+            "end": 41,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dormir-present",
+      "english": {
+        "text": "to sleep\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu durmo\ntu dormes\nele dorme\nnós dormimos\neles dormem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 8,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dormir-past",
+      "english": {
+        "text": "to sleep\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dormi\ntu dormiste\nele dormiu\nnós dormimos\neles dormiram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-dormir-imperfect",
+      "english": {
+        "text": "to sleep\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu dormia\ntu dormias\nele dormia\nnós dormíamos\neles dormiam",
+        "spans": [
+          {
+            "start": 39,
+            "end": 41,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sentir-present",
+      "english": {
+        "text": "to feel\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu sinto\ntu sentes\nele sente\nnós sentimos\neles sentem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 8,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sentir-past",
+      "english": {
+        "text": "to feel\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu senti\ntu sentiste\nele sentiu\nnós sentimos\neles sentiram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sentir-imperfect",
+      "english": {
+        "text": "to feel\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu sentia\ntu sentias\nele sentia\nnós sentíamos\neles sentiam",
+        "spans": [
+          {
+            "start": 39,
+            "end": 41,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-conseguir-present",
+      "english": {
+        "text": "to manage to, to be able to\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu consigo\ntu consegues\nele consegue\nnós conseguimos\neles conseguem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 10,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-conseguir-past",
+      "english": {
+        "text": "to manage to, to be able to\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu consegui\ntu conseguiste\nele conseguiu\nnós conseguimos\neles conseguiram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-conseguir-imperfect",
+      "english": {
+        "text": "to manage to, to be able to\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu conseguia\ntu conseguias\nele conseguia\nnós conseguíamos\neles conseguiam",
+        "spans": [
+          {
+            "start": 50,
+            "end": 53,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ficar-present",
+      "english": {
+        "text": "to stay, to become\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu fico\ntu ficas\nele fica\nnós ficamos\neles ficam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ficar-past",
+      "english": {
+        "text": "to stay, to become\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu fiquei\ntu ficaste\nele ficou\nnós ficámos\neles ficaram",
+        "spans": [
+          {
+            "start": 3,
+            "end": 9,
+            "colour": "orange"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ficar-imperfect",
+      "english": {
+        "text": "to stay, to become\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu ficava\ntu ficavas\nele ficava\nnós ficávamos\neles ficavam",
+        "spans": [
+          {
+            "start": 38,
+            "end": 40,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-chegar-present",
+      "english": {
+        "text": "to arrive\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu chego\ntu chegas\nele chega\nnós chegamos\neles chegam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-chegar-past",
+      "english": {
+        "text": "to arrive\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu cheguei\ntu chegaste\nele chegou\nnós chegámos\neles chegaram",
+        "spans": [
+          {
+            "start": 3,
+            "end": 10,
+            "colour": "orange"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-chegar-imperfect",
+      "english": {
+        "text": "to arrive\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu chegava\ntu chegavas\nele chegava\nnós chegávamos\neles chegavam",
+        "spans": [
+          {
+            "start": 42,
+            "end": 44,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-comecar-present",
+      "english": {
+        "text": "to begin, to start\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu começo\ntu começas\nele começa\nnós começamos\neles começam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-comecar-past",
+      "english": {
+        "text": "to begin, to start\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu comecei\ntu começaste\nele começou\nnós começámos\neles começaram",
+        "spans": [
+          {
+            "start": 3,
+            "end": 10,
+            "colour": "orange"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-comecar-imperfect",
+      "english": {
+        "text": "to begin, to start\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu começava\ntu começavas\nele começava\nnós começávamos\neles começavam",
+        "spans": [
+          {
+            "start": 46,
+            "end": 48,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-almoco",
+      "english": {
+        "text": "lunch",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o almoço",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-jantar",
+      "english": {
+        "text": "dinner",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o jantar",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-ementa",
+      "english": {
+        "text": "the menu",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a ementa",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-conta",
+      "english": {
+        "text": "the bill",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a conta",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-troco",
+      "english": {
+        "text": "the change (money)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o troco",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-esquadra",
+      "english": {
+        "text": "the police station",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a esquadra",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-correio",
+      "english": {
+        "text": "the post office, the post",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o correio",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-farmacia",
+      "english": {
+        "text": "the chemist's",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a farmácia",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-medico",
+      "english": {
+        "text": "the doctor",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o médico",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-consulta",
+      "english": {
+        "text": "the appointment",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a consulta",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-quarto",
+      "english": {
+        "text": "the bedroom",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o quarto",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-cozinha",
+      "english": {
+        "text": "the kitchen",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a cozinha",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-fogao",
+      "english": {
+        "text": "the cooker",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o fogão",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-chave",
+      "english": {
+        "text": "the key",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a chave",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-andar",
+      "english": {
+        "text": "the floor, the storey",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o andar",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-elevador",
+      "english": {
+        "text": "the lift",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o elevador",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-bilhete",
+      "english": {
+        "text": "the ticket",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o bilhete",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-fila",
+      "english": {
+        "text": "the queue",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a fila",
+        "spans": [
+          {
+            "start": 0,
+            "end": 6,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-feriado",
+      "english": {
+        "text": "the public holiday",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o feriado",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-praia",
+      "english": {
+        "text": "the beach",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a praia",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-nevoeiro",
+      "english": {
+        "text": "the fog",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o nevoeiro",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-chuva",
+      "english": {
+        "text": "the rain",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a chuva",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-o-ecra",
+      "english": {
+        "text": "the screen",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o ecrã",
+        "spans": [
+          {
+            "start": 0,
+            "end": 6,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-palavra",
+      "english": {
+        "text": "the word",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a palavra",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-giro",
+      "english": {
+        "text": "nice, pretty, cool",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "giro",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-chato",
+      "english": {
+        "text": "annoying, boring",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "chato",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-fixe",
+      "english": {
+        "text": "cool, great",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "fixe",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-esquisito",
+      "english": {
+        "text": "strange, odd (NOT exquisite)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "esquisito",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-engracado",
+      "english": {
+        "text": "funny",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "engraçado",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-lento",
+      "english": {
+        "text": "slow",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "lento",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-limpo",
+      "english": {
+        "text": "clean",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "limpo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sujo",
+      "english": {
+        "text": "dirty",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "sujo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pesado",
+      "english": {
+        "text": "heavy",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "pesado",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-leve",
+      "english": {
+        "text": "light (in weight)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "leve",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-estreito",
+      "english": {
+        "text": "narrow",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "estreito",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-largo",
+      "english": {
+        "text": "wide",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "largo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-escuro",
+      "english": {
+        "text": "dark",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "escuro",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-claro",
+      "english": {
+        "text": "light, clear",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "claro",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-se-calhar",
+      "english": {
+        "text": "maybe, perhaps",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "se calhar",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-de-certeza",
+      "english": {
+        "text": "definitely, for sure",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "de certeza",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-por-acaso",
+      "english": {
+        "text": "by any chance, as it happens",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "por acaso",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-em-vez-de",
+      "english": {
+        "text": "instead of",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "em vez de",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-ao-pe-de",
+      "english": {
+        "text": "next to, beside",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "ao pé de",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-seguir",
+      "english": {
+        "text": "next, afterwards",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a seguir",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-de-repente",
+      "english": {
+        "text": "suddenly",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "de repente",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-as-vezes",
+      "english": {
+        "text": "sometimes",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "às vezes",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pelo-menos",
+      "english": {
+        "text": "at least",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "pelo menos",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-sobretudo",
+      "english": {
+        "text": "above all, especially",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "sobretudo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-entretanto",
+      "english": {
+        "text": "meanwhile",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "entretanto",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-de-proposito",
+      "english": {
+        "text": "on purpose",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "de propósito",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-a-vontade",
+      "english": {
+        "text": "at ease, freely",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "à vontade",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    },
+    {
+      "id": "starter-pois-e",
+      "english": {
+        "text": "that's right, indeed",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "pois é",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-09-25T13:00:00.000Z",
+      "updatedAt": "2026-09-25T13:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-dont-know",
+      "name": "Don't know",
+      "order": 0,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-a-little",
+      "name": "Know a little",
+      "order": 1,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-well",
+      "name": "Know well",
+      "order": 2,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    }
+  ],
+  "colourMeanings": [
+    {
+      "colour": "blue",
+      "label": "Masculine noun"
+    },
+    {
+      "colour": "pink",
+      "label": "Feminine noun"
+    },
+    {
+      "colour": "green",
+      "label": "Verb ending"
+    },
+    {
+      "colour": "orange",
+      "label": "Irregular"
+    },
+    {
+      "colour": "purple",
+      "label": "Stressed syllable"
+    },
+    {
+      "colour": "teal",
+      "label": "Your own use"
+    }
+  ],
+  "deletions": []
+}
