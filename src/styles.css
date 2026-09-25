@@ -83,3 +83,119 @@ h1 {
   color: var(--text-muted);
   font-size: 0.875rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Card colours
+   --------------------------------------------------------------------------- */
+
+.colour-blue { color: var(--card-blue); font-weight: 600; }
+.colour-pink { color: var(--card-pink); font-weight: 600; }
+.colour-green { color: var(--card-green); font-weight: 600; }
+.colour-orange { color: var(--card-orange); font-weight: 600; }
+.colour-purple { color: var(--card-purple); font-weight: 600; }
+.colour-teal { color: var(--card-teal); font-weight: 600; }
+
+/* ---------------------------------------------------------------------------
+   Colour legend
+   --------------------------------------------------------------------------- */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0.875rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatch {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+/* ---------------------------------------------------------------------------
+   Card list
+   --------------------------------------------------------------------------- */
+
+.category {
+  margin-bottom: 2.25rem;
+}
+
+.category h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.count {
+  font-size: 0.8rem;
+  font-weight: 400;
+  background: var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  letter-spacing: 0;
+}
+
+.empty {
+  margin: 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.card-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.875rem 1rem;
+}
+
+.card-portuguese {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.card-english {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Warnings
+   --------------------------------------------------------------------------- */
+
+.warning {
+  background: #fdf1e3;
+  border: 1px solid var(--card-orange);
+  border-radius: var(--radius);
+  padding: 0.875rem 1rem;
+  margin-bottom: 1.5rem;
+}
