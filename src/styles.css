@@ -726,3 +726,19 @@ button.reveal {
   height: 1.1rem;
   flex: 0 0 auto;
 }
+
+/* ---------------------------------------------------------------------------
+   Choosing between merge and replace
+   --------------------------------------------------------------------------- */
+
+.choice {
+  margin: 0 0 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.choice-detail {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

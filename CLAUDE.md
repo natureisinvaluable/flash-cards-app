@@ -24,6 +24,10 @@ Built: the card list, the editor with word colouring and accent buttons, editabl
 one-tap re-filing, study mode, search, settings, and backup/restore. See "Deliberately postponed"
 at the bottom for what was left out on purpose.
 
+v1.1 added merging, so a backup file can be combined with what is already on a device rather than
+only replacing it. This is how cards move between the owner's laptop and phone. Full automatic sync
+is still not built, and merge was written as the deliberate first half of it.
+
 ## Architecture
 
 **The entire app runs in the browser. There is no backend.**
@@ -64,6 +68,21 @@ Every read and write of cards and categories goes through that one module. No co
 Every card and category carries a **stable unique ID** and a **last-modified timestamp**, and the
 stored data carries a **schema version number** so future changes can migrate existing cards instead
 of orphaning them.
+
+### Merging (`src/merge.ts`)
+
+One rule decides everything: **for anything present in both, the version edited most recently
+wins.** Cards, categories and colour labels all follow it. This is what the `updatedAt` timestamps
+were always for.
+
+Deletions need their own record, in `AppData.deletions`. Without one, merging resurrects deleted
+cards forever — the other device still holds the card and cannot know it was removed on purpose. An
+edit made *after* a deletion still wins, which is correct: someone deliberately worked on that card
+later. Deletion records travel inside backup files, so removing them from `parseBackup` would
+silently break merging.
+
+Merging is symmetric: merging A into B gives the same result as B into A. Keep it that way, and
+keep `mergeData` pure so the interface can show what a merge would do before committing to it.
 
 **Browser storage is separate per web address.** `localhost:5173`, the LAN address used for phone
 testing, and the published GitHub Pages site each hold their own independent cards, on each device.
@@ -152,7 +171,11 @@ Verification is hands-on. Run `npm run dev` and check whatever the change touche
   accents (`src/search.ts`), so `cao` must still find `cão` - the accented words are exactly the
   ones that are hard to type.
 - Run a study session twice; order differs; filing a card during study shows in the list afterwards.
-- **Download a backup, then restore it** — colours included. This is the app's only safety net.
+- **Download a backup, then open it again** — colours included, testing both Merge and Replace.
+  This is the app's only safety net.
+- For anything touching merge: check that a card deleted on purpose is not resurrected by an older
+  backup, that an edit made after the deletion does bring it back, and that merging a file with
+  itself changes nothing.
 - Accent buttons insert the right character at the cursor.
 
 Anything touching storage or backup gets the backup/restore check without exception.

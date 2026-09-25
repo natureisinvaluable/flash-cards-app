@@ -8,7 +8,7 @@ import type { AppData, Card, CardSide, Category, ColourId, ColourMeaning } from 
  * itself without needing instructions.
  */
 
-export const SCHEMA_VERSION = 1
+export const SCHEMA_VERSION = 2
 
 export const CATEGORY_IDS = {
   dontKnow: 'category-dont-know',
@@ -96,5 +96,6 @@ export function initialData(now: string): AppData {
     cards: exampleCards(now),
     categories: defaultCategories(now),
     colourMeanings: defaultColourMeanings(),
+    deletions: [],
   }
 }

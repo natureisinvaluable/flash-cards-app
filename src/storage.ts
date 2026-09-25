@@ -1,5 +1,5 @@
-import type { AppData, Card, CardSide, Category, ColourId } from './types'
-import { SCHEMA_VERSION, initialData } from './exampleData'
+import type { AppData, Card, CardSide, Category, ColourId, Deletion } from './types'
+import { SCHEMA_VERSION, defaultColourMeanings, initialData } from './exampleData'
 
 /**
  * The ONE place that reads and writes saved data. No component should touch
@@ -31,11 +31,22 @@ export function newId(): string {
   return `id-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
 }
 
-/** Bring older saved data up to the current shape. */
+/**
+ * Bring older saved data up to the current shape.
+ *
+ * Always add to existing data rather than discarding anything the owner cannot
+ * get back. Version 2 introduced deletion records and timestamps on colour
+ * meanings; both are simply absent in version 1 data and default safely.
+ */
 function migrate(data: AppData): AppData {
-  // Only one schema version exists so far. When that changes, add the steps
-  // here rather than discarding data the owner cannot get back.
-  return { ...data, schemaVersion: SCHEMA_VERSION }
+  return {
+    ...data,
+    schemaVersion: SCHEMA_VERSION,
+    deletions: Array.isArray(data.deletions) ? data.deletions : [],
+    colourMeanings: Array.isArray(data.colourMeanings)
+      ? data.colourMeanings
+      : defaultColourMeanings(),
+  }
 }
 
 function isPlausible(value: unknown): value is AppData {
@@ -109,8 +120,17 @@ export function updateCard(data: AppData, id: string, changes: Partial<Omit<Card
   }
 }
 
+/** Record that something was removed on purpose, so a merge cannot undo it. */
+function recordDeletion(data: AppData, id: string): Deletion[] {
+  return [...data.deletions.filter((d) => d.id !== id), { id, deletedAt: now() }]
+}
+
 export function deleteCard(data: AppData, id: string): AppData {
-  return { ...data, cards: data.cards.filter((c) => c.id !== id) }
+  return {
+    ...data,
+    cards: data.cards.filter((c) => c.id !== id),
+    deletions: recordDeletion(data, id),
+  }
 }
 
 export function setCardCategory(data: AppData, id: string, categoryId: string): AppData {
@@ -118,7 +138,16 @@ export function setCardCategory(data: AppData, id: string, categoryId: string): 
 }
 
 export function removeExampleCards(data: AppData): AppData {
-  return { ...data, cards: data.cards.filter((c) => !c.isExample) }
+  const removed = data.cards.filter((c) => c.isExample).map((c) => c.id)
+  const stamp = now()
+  return {
+    ...data,
+    cards: data.cards.filter((c) => !c.isExample),
+    deletions: [
+      ...data.deletions.filter((d) => !removed.includes(d.id)),
+      ...removed.map((id) => ({ id, deletedAt: stamp })),
+    ],
+  }
 }
 
 export function hasExampleCards(data: AppData): boolean {
@@ -156,6 +185,7 @@ export function deleteCategory(data: AppData, id: string, moveCardsTo: string): 
     cards: data.cards.map((c) =>
       c.categoryId === id ? { ...c, categoryId: moveCardsTo, updatedAt: now() } : c,
     ),
+    deletions: recordDeletion(data, id),
   }
 }
 
@@ -186,9 +216,12 @@ export function countCardsIn(data: AppData, categoryId: string): number {
 }
 
 export function setColourMeaning(data: AppData, colour: ColourId, label: string): AppData {
+  const stamp = now()
   return {
     ...data,
-    colourMeanings: data.colourMeanings.map((m) => (m.colour === colour ? { ...m, label } : m)),
+    colourMeanings: data.colourMeanings.map((m) =>
+      m.colour === colour ? { ...m, label, updatedAt: stamp } : m,
+    ),
   }
 }
 

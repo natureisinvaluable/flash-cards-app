@@ -55,6 +55,21 @@ export interface Category {
 export interface ColourMeaning {
   colour: ColourId
   label: string
+  /** Absent on data saved before merging existed; treated as "very old". */
+  updatedAt?: string
+}
+
+/**
+ * A record that something was deleted, kept after the thing itself is gone.
+ *
+ * Without this, merging two devices would resurrect deleted cards: the other
+ * device still has the card, sees no reason to think it was removed on
+ * purpose, and hands it back. Knowing WHEN it was deleted lets a later edit on
+ * another device legitimately win instead.
+ */
+export interface Deletion {
+  id: string
+  deletedAt: string
 }
 
 /** Everything the app stores, as one document. */
@@ -63,4 +78,6 @@ export interface AppData {
   cards: Card[]
   categories: Category[]
   colourMeanings: ColourMeaning[]
+  /** Ids of cards and categories that were deliberately removed. */
+  deletions: Deletion[]
 }

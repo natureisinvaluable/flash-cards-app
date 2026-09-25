@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { Card, CardSide } from './types'
 import { useAppData } from './useAppData'
 import { addCard, deleteCard, setCardCategory, updateCard } from './storage'
+import { mergeData } from './merge'
 import { CardList } from './components/CardList'
 import { ColourLegend } from './components/ColourLegend'
 import { BackupPanel } from './components/BackupPanel'
@@ -126,7 +127,11 @@ export default function App() {
           {panel === 'categories' && <CategoryManager data={data} update={update} />}
           {panel === 'settings' && <SettingsPanel data={data} update={update} />}
           {panel === 'backup' && (
-            <BackupPanel data={data} onRestore={(restored) => update(() => restored)} />
+            <BackupPanel
+              data={data}
+              onMerge={(incoming) => update((current) => mergeData(current, incoming).data)}
+              onReplace={(incoming) => update(() => incoming)}
+            />
           )}
 
           <div className="search-field">

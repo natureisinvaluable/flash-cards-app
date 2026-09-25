@@ -1,4 +1,4 @@
-import type { AppData, Card, CardSide, Category, ColourMeaning } from './types'
+import type { AppData, Card, CardSide, Category, ColourMeaning, Deletion } from './types'
 import { SCHEMA_VERSION, defaultColourMeanings } from './exampleData'
 
 /**
@@ -143,6 +143,18 @@ export function parseBackup(text: string): ParseResult {
     ? (file.colourMeanings as ColourMeaning[])
     : defaultColourMeanings()
 
+  // Deletion records travel with the backup so that merging cannot resurrect
+  // a card the other device deliberately removed.
+  const deletions: Deletion[] = Array.isArray(file.deletions)
+    ? (file.deletions as Deletion[]).filter(
+        (d) =>
+          typeof d === 'object' &&
+          d !== null &&
+          typeof d.id === 'string' &&
+          typeof d.deletedAt === 'string',
+      )
+    : []
+
   return {
     ok: true,
     data: {
@@ -150,6 +162,7 @@ export function parseBackup(text: string): ParseResult {
       cards: rehomed,
       categories,
       colourMeanings,
+      deletions,
     },
     warning: notes.length > 0 ? notes.join('; ') : undefined,
   }
