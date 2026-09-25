@@ -1,10 +1,34 @@
+import { useState } from 'react'
+import type { Card, CardSide } from './types'
 import { useAppData } from './useAppData'
+import { addCard, deleteCard, updateCard } from './storage'
 import { CardList } from './components/CardList'
 import { ColourLegend } from './components/ColourLegend'
 import { BackupPanel } from './components/BackupPanel'
+import { CardEditor } from './components/CardEditor'
+
+type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
 
 export default function App() {
   const { data, update, saveFailed } = useAppData()
+  const [editing, setEditing] = useState<Editing>(null)
+
+  function handleSave(english: CardSide, portuguese: CardSide, categoryId: string) {
+    if (editing?.mode === 'edit') {
+      update((current) =>
+        updateCard(current, editing.card.id, { english, portuguese, categoryId }),
+      )
+    } else {
+      update((current) => addCard(current, english, portuguese, categoryId))
+    }
+    setEditing(null)
+  }
+
+  function handleDelete() {
+    if (editing?.mode !== 'edit') return
+    update((current) => deleteCard(current, editing.card.id))
+    setEditing(null)
+  }
 
   return (
     <main className="shell">
@@ -21,9 +45,27 @@ export default function App() {
         </p>
       )}
 
+      {editing ? (
+        <CardEditor
+          // Remounts when switching cards, so the fields reload.
+          key={editing.mode === 'edit' ? editing.card.id : 'new'}
+          data={data}
+          card={editing.mode === 'edit' ? editing.card : null}
+          onSave={handleSave}
+          onDelete={handleDelete}
+          onCancel={() => setEditing(null)}
+        />
+      ) : (
+        <div className="button-row toolbar">
+          <button type="button" onClick={() => setEditing({ mode: 'new' })}>
+            Add a card
+          </button>
+        </div>
+      )}
+
       <ColourLegend meanings={data.colourMeanings} />
 
-      <CardList data={data} />
+      <CardList data={data} onEdit={(card) => setEditing({ mode: 'edit', card })} />
 
       <BackupPanel data={data} onRestore={(restored) => update(() => restored)} />
 

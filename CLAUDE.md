@@ -62,6 +62,11 @@ Every card and category carries a **stable unique ID** and a **last-modified tim
 stored data carries a **schema version number** so future changes can migrate existing cards instead
 of orphaning them.
 
+**Browser storage is separate per web address.** `localhost:5173`, the LAN address used for phone
+testing, and the published GitHub Pages site each hold their own independent cards, on each device.
+This surprises people. The published site on the owner's laptop is the real one; the dev server is
+scaffolding and anything typed into it is throwaway.
+
 Nothing uses the IDs and timestamps yet. They exist because cross-device sync is the most likely
 future feature, and retrofitting them later is painful. Adding sync should mean writing a second
 implementation of this one module — not unpicking storage code spread across the app.
@@ -76,9 +81,17 @@ explicit decision from the owner. The plain-text approach was chosen on purpose:
 dependencies, it keeps search working correctly against plain text, and it keeps stored data clean
 for export and any future sync.
 
-Known limitation, by design: editing text can disturb colour positions. Colours on untouched text
-survive; a colour overlapping rewritten text is **dropped**, never silently moved onto the wrong
-word. Keep this behaviour.
+Known limitation, by design: editing text can disturb colour positions. The rules, in
+`src/colour.ts`:
+
+- Colours on untouched text survive, shifting if text is added or removed before them.
+- An edit **strictly inside** a coloured stretch, leaving its first and last characters untouched,
+  keeps the colour and stretches it. This covers correcting `dificil` to `difícil`, which is an
+  everyday edit in Portuguese and too common to punish.
+- Anything else overlapping the colour **drops** it. A missing colour is obvious and easy to
+  reapply; a colour silently sitting on the wrong word would teach the wrong thing.
+
+Keep this behaviour. It is tested by hand against the scenarios listed in the Stage 3 commit.
 
 ## European Portuguese, not Brazilian
 

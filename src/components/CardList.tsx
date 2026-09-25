@@ -1,13 +1,9 @@
-import type { AppData } from '../types'
+import type { AppData, Card } from '../types'
 import { sortedCategories } from '../storage'
 import { ColouredText } from './ColouredText'
 
-/**
- * Every card, grouped under its category.
- *
- * Stage 1 only displays. Editing, re-filing and search arrive in later stages.
- */
-export function CardList({ data }: { data: AppData }) {
+/** Every card, grouped under its category. */
+export function CardList({ data, onEdit }: { data: AppData; onEdit: (card: Card) => void }) {
   const categories = sortedCategories(data)
 
   return (
@@ -25,13 +21,15 @@ export function CardList({ data }: { data: AppData }) {
             ) : (
               <ul className="card-grid">
                 {cards.map((card) => (
-                  <li key={card.id} className="card">
-                    <p className="card-portuguese">
-                      <ColouredText side={card.portuguese} />
-                    </p>
-                    <p className="card-english">
-                      <ColouredText side={card.english} />
-                    </p>
+                  <li key={card.id}>
+                    <button type="button" className="card" onClick={() => onEdit(card)}>
+                      <span className="card-portuguese">
+                        <ColouredText side={card.portuguese} />
+                      </span>
+                      <span className="card-english">
+                        <ColouredText side={card.english} />
+                      </span>
+                    </button>
                   </li>
                 ))}
               </ul>

@@ -1,4 +1,4 @@
-import type { CardSide, ColourId } from './types'
+import type { CardSide, ColourId, ColourSpan } from './types'
 
 /** A run of text that is all one colour (or uncoloured). */
 export interface Segment {
@@ -7,41 +7,126 @@ export interface Segment {
 }
 
 /**
- * Turn plain text plus a list of colour ranges into runs ready to display.
+ * Colour ranges are stored as positions in the text ("characters 4 to 8 are
+ * blue"). Working with ranges directly is fiddly: they can overlap, nest, or
+ * be split in half by an edit.
  *
- * Works by colouring a character at a time and then grouping neighbours that
- * match. That is slower than merging ranges directly, but card text is a few
- * words long, and it means overlapping, out-of-order or out-of-range spans can
- * never produce a broken result. Where spans overlap, the last one wins.
+ * So everything here goes via one representation - a colour per character -
+ * and rebuilds tidy ranges at the end. Card text is a few words long, so the
+ * cost is irrelevant and it removes a whole class of edge cases.
  */
-export function toSegments(side: CardSide): Segment[] {
-  const { text, spans } = side
-  if (text.length === 0) return []
-
-  const colourAt: (ColourId | null)[] = new Array(text.length).fill(null)
-
-  for (const span of spans) {
-    const start = Math.max(0, Math.min(span.start, text.length))
-    const end = Math.max(start, Math.min(span.end, text.length))
-    for (let i = start; i < end; i++) colourAt[i] = span.colour
+function charColours(side: CardSide): (ColourId | null)[] {
+  const colours: (ColourId | null)[] = new Array(side.text.length).fill(null)
+  for (const span of side.spans) {
+    const start = Math.max(0, Math.min(span.start, side.text.length))
+    const end = Math.max(start, Math.min(span.end, side.text.length))
+    for (let i = start; i < end; i++) colours[i] = span.colour
   }
+  return colours
+}
 
-  const segments: Segment[] = []
-  for (let i = 0; i < text.length; i++) {
-    const last = segments[segments.length - 1]
-    if (last && last.colour === colourAt[i]) {
-      last.text += text[i]
+function spansFromChars(colours: (ColourId | null)[]): ColourSpan[] {
+  const spans: ColourSpan[] = []
+  for (let i = 0; i < colours.length; i++) {
+    const colour = colours[i]
+    if (colour === null) continue
+    const last = spans[spans.length - 1]
+    if (last && last.colour === colour && last.end === i) {
+      last.end = i + 1
     } else {
-      segments.push({ text: text[i], colour: colourAt[i] })
+      spans.push({ start: i, end: i + 1, colour })
+    }
+  }
+  return spans
+}
+
+/** Break a side into runs ready to display. */
+export function toSegments(side: CardSide): Segment[] {
+  const colours = charColours(side)
+  const segments: Segment[] = []
+  for (let i = 0; i < side.text.length; i++) {
+    const last = segments[segments.length - 1]
+    if (last && last.colour === colours[i]) {
+      last.text += side.text[i]
+    } else {
+      segments.push({ text: side.text[i], colour: colours[i] })
     }
   }
   return segments
 }
 
-/** Drop spans that are empty or point outside the text. */
-export function tidySpans(side: CardSide): CardSide {
-  return {
-    text: side.text,
-    spans: side.spans.filter((s) => s.start < s.end && s.start >= 0 && s.end <= side.text.length),
-  }
+/** Colour a selected stretch of text, or clear it by passing null. */
+export function applyColour(
+  side: CardSide,
+  start: number,
+  end: number,
+  colour: ColourId | null,
+): CardSide {
+  const from = Math.max(0, Math.min(start, side.text.length))
+  const to = Math.max(from, Math.min(end, side.text.length))
+  if (from === to) return side
+
+  const colours = charColours(side)
+  for (let i = from; i < to; i++) colours[i] = colour
+  return { text: side.text, spans: spansFromChars(colours) }
 }
+
+/**
+ * Move colours across when the text itself is edited.
+ *
+ * The rule, from CLAUDE.md: colours on untouched text survive, and a colour
+ * overlapping rewritten text is DROPPED rather than silently landing on the
+ * wrong word. A missing colour is obvious and re-appliable; a colour on the
+ * wrong letter would teach the wrong thing.
+ *
+ * The exception is an edit that falls STRICTLY INSIDE a coloured stretch,
+ * leaving its first and last characters untouched - typing or fixing an accent
+ * in an already-coloured word. The colour plainly still belongs to that word,
+ * so it stays and stretches. This matters in Portuguese, where correcting
+ * 'dificil' to 'dificil' with an accent is an everyday edit.
+ */
+export function remapSpans(oldText: string, newText: string, spans: ColourSpan[]): ColourSpan[] {
+  if (oldText === newText) return spans
+
+  // How much of the start and end of the text is unchanged.
+  const maxShared = Math.min(oldText.length, newText.length)
+  let prefix = 0
+  while (prefix < maxShared && oldText[prefix] === newText[prefix]) prefix++
+  let suffix = 0
+  while (
+    suffix < maxShared - prefix &&
+    oldText[oldText.length - 1 - suffix] === newText[newText.length - 1 - suffix]
+  ) {
+    suffix++
+  }
+
+  const delta = newText.length - oldText.length
+  const changedStart = prefix
+  const changedEnd = oldText.length - suffix // exclusive, in the old text
+  const moved: ColourSpan[] = []
+  for (const span of spans) {
+    if (span.end <= changedStart) {
+      moved.push(span) // entirely before the edit
+    } else if (span.start >= changedEnd) {
+      moved.push({ ...span, start: span.start + delta, end: span.end + delta })
+    } else if (span.start < changedStart && changedEnd < span.end) {
+      moved.push({ ...span, end: span.end + delta }) // edited strictly inside it
+    }
+    // otherwise it overlapped rewritten text, so it is dropped
+  }
+
+  return moved.filter((s) => s.start < s.end && s.start >= 0 && s.end <= newText.length)
+}
+
+/** Replace the selected stretch with new text, keeping colours in step. */
+export function replaceRange(side: CardSide, start: number, end: number, insert: string): CardSide {
+  const text = side.text.slice(0, start) + insert + side.text.slice(end)
+  return { text, spans: remapSpans(side.text, text, side.spans) }
+}
+
+/** Update the text wholesale (a textarea edit), keeping colours in step. */
+export function setText(side: CardSide, text: string): CardSide {
+  return { text, spans: remapSpans(side.text, text, side.spans) }
+}
+
+export const emptySide = (): CardSide => ({ text: '', spans: [] })

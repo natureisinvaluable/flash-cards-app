@@ -171,19 +171,31 @@ h1 {
 }
 
 .card {
+  display: block;
+  width: 100%;
+  text-align: left;
   background: var(--surface);
+  color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.875rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  filter: none;
 }
 
 .card-portuguese {
-  margin: 0 0 0.2rem;
+  display: block;
+  margin-bottom: 0.2rem;
   font-size: 1.15rem;
 }
 
 .card-english {
-  margin: 0;
+  display: block;
   color: var(--text-muted);
   font-size: 0.9rem;
 }
@@ -291,4 +303,131 @@ button.secondary {
 .confirm code {
   font-size: 0.85rem;
   word-break: break-all;
+}
+
+/* ---------------------------------------------------------------------------
+   Card editor
+   --------------------------------------------------------------------------- */
+
+.toolbar {
+  margin-bottom: 1.5rem;
+}
+
+.editor {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.side-editor {
+  margin-bottom: 1.5rem;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  resize: vertical;
+}
+
+select {
+  min-height: var(--tap-target);
+}
+
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+/* Accented characters that are hard to type on a UK keyboard */
+.accent-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.accent {
+  min-width: var(--tap-target);
+  min-height: 2.25rem;
+  padding: 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+/* Colour swatches */
+.colour-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.swatch-button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0 0.7rem;
+  font-size: 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  /* .colour-* sets `color`, which the swatch inherits via currentColor */
+}
+
+.swatch-button:disabled,
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.swatch-label {
+  color: var(--text);
+  font-weight: 400;
+}
+
+button.small {
+  min-height: 2.25rem;
+  padding: 0 0.7rem;
+  font-size: 0.85rem;
+}
+
+button.danger {
+  color: var(--surface);
+  background: #a3232a;
+  border-color: #a3232a;
+}
+
+.hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.preview {
+  margin: 0.6rem 0 0;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 1.1rem;
 }
