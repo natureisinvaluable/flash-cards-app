@@ -159,6 +159,32 @@ export function deleteCategory(data: AppData, id: string, moveCardsTo: string): 
   }
 }
 
+/** Move a category one place up or down in the running order. */
+export function moveCategory(data: AppData, id: string, direction: -1 | 1): AppData {
+  const ordered = sortedCategories(data)
+  const index = ordered.findIndex((c) => c.id === id)
+  const target = index + direction
+  if (index === -1 || target < 0 || target >= ordered.length) return data
+
+  const swapped = [...ordered]
+  swapped[index] = ordered[target]
+  swapped[target] = ordered[index]
+
+  const stamp = now()
+  return {
+    ...data,
+    categories: swapped.map((category, position) => ({
+      ...category,
+      order: position,
+      updatedAt: category.order === position ? category.updatedAt : stamp,
+    })),
+  }
+}
+
+export function countCardsIn(data: AppData, categoryId: string): number {
+  return data.cards.filter((c) => c.categoryId === categoryId).length
+}
+
 export function setColourMeaning(data: AppData, colour: ColourId, label: string): AppData {
   return {
     ...data,
