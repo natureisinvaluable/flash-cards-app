@@ -7,6 +7,7 @@ import { ColourLegend } from './components/ColourLegend'
 import { BackupPanel } from './components/BackupPanel'
 import { CardEditor } from './components/CardEditor'
 import { CategoryManager } from './components/CategoryManager'
+import { Study } from './components/Study'
 
 type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
 
@@ -14,6 +15,7 @@ export default function App() {
   const { data, update, saveFailed } = useAppData()
   const [editing, setEditing] = useState<Editing>(null)
   const [showCategories, setShowCategories] = useState(false)
+  const [studying, setStudying] = useState(false)
 
   function handleSave(english: CardSide, portuguese: CardSide, categoryId: string) {
     if (editing?.mode === 'edit') {
@@ -30,6 +32,20 @@ export default function App() {
     if (editing?.mode !== 'edit') return
     update((current) => deleteCard(current, editing.card.id))
     setEditing(null)
+  }
+
+  if (studying) {
+    return (
+      <main className="shell">
+        <Study
+          data={data}
+          onMove={(cardId, categoryId) =>
+            update((current) => setCardCategory(current, cardId, categoryId))
+          }
+          onExit={() => setStudying(false)}
+        />
+      </main>
+    )
   }
 
   return (
@@ -59,7 +75,10 @@ export default function App() {
         />
       ) : (
         <div className="button-row toolbar">
-          <button type="button" onClick={() => setEditing({ mode: 'new' })}>
+          <button type="button" onClick={() => setStudying(true)} disabled={data.cards.length === 0}>
+            Study
+          </button>
+          <button type="button" className="secondary" onClick={() => setEditing({ mode: 'new' })}>
             Add a card
           </button>
           <button
