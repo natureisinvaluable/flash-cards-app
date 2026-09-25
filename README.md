@@ -1,0 +1,1 @@
+This repo contains a simple application for users to create and use landguage flash cards.
