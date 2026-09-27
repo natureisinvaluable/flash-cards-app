@@ -2,6 +2,26 @@
 
 Guidance for Claude Code sessions working in this repository.
 
+## Two apps live here
+
+| | Where | Status |
+|---|---|---|
+| **v1** | repository root (`src/`, `index.html`) | **Frozen and in daily use.** Do not change it. |
+| **v2** | `v2/` | Under construction. Has its own `v2/CLAUDE.md` — read it before working there. |
+
+`PRODUCT.md` is the v1 brief; `PRODUCTv2.md` is the v2 brief.
+
+**v1 is frozen on purpose.** The owner uses it every day and `PRODUCTv2.md` requires that it stays
+live and working. v2 began as a copy of v1 and diverges from there. The duplication is deliberate:
+v1 needs no further changes, and full separation means no v2 work can ever break the app the owner
+is relying on. **Do not refactor the two together, extract shared code between them, or "tidy up"
+the duplication.**
+
+The only file both share is the deployment workflow, which builds each app and publishes v1 at
+`/flash-cards-app/` and v2 at `/flash-cards-app/v2/`.
+
+The rest of this file describes **v1**.
+
 ## The product
 
 A private flashcard app for one person learning **European Portuguese**. Each card has two sides:
