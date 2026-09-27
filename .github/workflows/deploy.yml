@@ -1,5 +1,13 @@
-# Publishes the app to GitHub Pages whenever `main` changes.
+# Publishes the apps to GitHub Pages whenever `main` changes.
 # Nothing here needs to be run by hand: push to main and the live site updates.
+#
+# Two apps are published from one site:
+#   v1  ->  /flash-cards-app/      (frozen, in daily use)
+#   v2  ->  /flash-cards-app/v2/   (under construction)
+#
+# If either build fails the whole workflow fails and nothing is published, so
+# the currently live site stays exactly as it is. That is the desired
+# behaviour: a broken v2 must never be able to take v1 down.
 
 name: Deploy to GitHub Pages
 
@@ -28,9 +36,27 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            v2/package-lock.json
 
+      # v1, into dist/
       - run: npm ci
       - run: npm run build
+
+      # v2, into dist/v2/
+      - run: npm ci
+        working-directory: v2
+      - run: npm run build
+        working-directory: v2
+      - run: mv v2/dist dist/v2
+
+      # Cheap guard against publishing a site that is missing an app.
+      - name: Check both apps are present
+        run: |
+          test -f dist/index.html || { echo "v1 is missing from the build"; exit 1; }
+          test -f dist/v2/index.html || { echo "v2 is missing from the build"; exit 1; }
+          echo "v1 and v2 both built"
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
