@@ -795,3 +795,18 @@ a {
   margin: 0.25rem 0 0.5rem;
   padding-left: 1.4rem;
 }
+
+.pool-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.pool-note {
+  margin: 0 0 1rem;
+}

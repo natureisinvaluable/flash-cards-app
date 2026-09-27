@@ -3,6 +3,7 @@ import { isConfigured } from './config'
 import { useSession } from './useSession'
 import { SignIn } from './components/SignIn'
 import { AccountPanel } from './components/AccountPanel'
+import { SharedCards } from './components/SharedCards'
 
 export default function App() {
   const { session, loading } = useSession()
@@ -33,15 +34,13 @@ export default function App() {
         <>
           <AccountPanel session={session} />
 
+          <SharedCards />
+
           <section className="panel">
-            <h2>Nothing here yet</h2>
             <p>
-              The shared cards, filing them and studying all arrive in the stages
-              that follow.
-            </p>
-            <p>
-              <strong>Your cards are not here.</strong> They are still in version
-              1, working as usual.
+              <strong>Your own cards are not here yet.</strong> They are still in
+              version 1, working as usual, and will be brought across once the
+              rest of v2 is built.
             </p>
             <div className="button-row">
               <button type="button" className="secondary" onClick={() => supabase.auth.signOut()}>
