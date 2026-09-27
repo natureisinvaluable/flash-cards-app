@@ -747,3 +747,51 @@ button.reveal {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* ---------------------------------------------------------------------------
+   v2 additions
+   --------------------------------------------------------------------------- */
+
+input[type='email'],
+input[type='text'] {
+  width: 100%;
+  min-height: var(--tap-target);
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+input[type='email']:focus,
+input[type='text']:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.account {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.account dt {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.account dd {
+  margin: 0;
+}
+
+.category-check {
+  margin: 0.25rem 0 0.5rem;
+  padding-left: 1.4rem;
+}
