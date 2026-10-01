@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { Card, CardState, Category } from './types'
-import { fetchCards, createCard, updateCard } from './cards'
+import { fetchCards, createCard, updateCard, deleteCard } from './cards'
 import { fetchProfile, type Profile } from './profile'
 import { fetchCategories, addCategory, renameCategory, swapCategoryOrder, deleteCategory } from './categories'
 import { fetchCardStates, setCardCategory } from './cardStates'
@@ -172,6 +172,20 @@ export function useLibrary(userId: string) {
     [fileCard, states, userId],
   )
 
+  /**
+   * Delete a card for everyone. Only the owner can do this, and the database
+   * is what enforces it - the hidden button is a courtesy, not the protection.
+   */
+  const removeCard = useCallback(async (cardId: string) => {
+    await deleteCard(cardId)
+    setCards((current) => current.filter((c) => c.id !== cardId))
+    setStates((current) => {
+      const next = { ...current }
+      delete next[cardId]
+      return next
+    })
+  }, [])
+
   return {
     profile,
     cards,
@@ -182,6 +196,7 @@ export function useLibrary(userId: string) {
     dismissError: () => setError(null),
     fileCard,
     saveCard,
+    removeCard,
     createCategory,
     rename,
     move,

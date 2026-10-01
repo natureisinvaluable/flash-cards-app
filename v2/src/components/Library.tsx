@@ -20,6 +20,21 @@ export function Library({ session }: { session: Session }) {
 
   const colourMeanings = library.profile?.colourMeanings ?? []
 
+  async function handleDelete() {
+    if (editing?.mode !== 'edit') return
+    setSaving(true)
+    try {
+      await library.removeCard(editing.card.id)
+      setEditing(null)
+    } catch (e) {
+      // Surfaced rather than swallowed: if the database refused, the person
+      // needs to know the card is still there.
+      window.alert((e as Error).message)
+    } finally {
+      setSaving(false)
+    }
+  }
+
   async function handleSave(english: CardSide, portuguese: CardSide, categoryId: string | null) {
     setSaving(true)
     try {
@@ -40,7 +55,9 @@ export function Library({ session }: { session: Session }) {
         currentCategoryId={
           editing.mode === 'edit' ? (library.states[editing.card.id]?.categoryId ?? null) : null
         }
+        isOwner={library.profile?.isOwner ?? false}
         onSave={handleSave}
+        onDelete={handleDelete}
         onCancel={() => setEditing(null)}
         saving={saving}
       />

@@ -22,7 +22,9 @@ export function CardEditor({
   categories,
   colourMeanings,
   currentCategoryId,
+  isOwner,
   onSave,
+  onDelete,
   onCancel,
   saving,
 }: {
@@ -32,6 +34,9 @@ export function CardEditor({
   colourMeanings: ColourMeaning[]
   /** Where this card currently sits for you, if anywhere. */
   currentCategoryId: string | null
+  /** Only the owner may remove a card from the shared pool. */
+  isOwner: boolean
+  onDelete: () => void
   onSave: (english: CardSide, portuguese: CardSide, categoryId: string | null) => void
   onCancel: () => void
   saving: boolean
@@ -41,6 +46,7 @@ export function CardEditor({
   const [categoryId, setCategoryId] = useState<string>(
     currentCategoryId ?? categories[0]?.id ?? UNSORTED,
   )
+  const [confirmingDelete, setConfirmingDelete] = useState(false)
 
   const ready = english.text.trim().length > 0 && portuguese.text.trim().length > 0
 
@@ -100,9 +106,48 @@ export function CardEditor({
         <button type="button" className="secondary" onClick={onCancel} disabled={saving}>
           Cancel
         </button>
+        {card && isOwner && (
+          <button
+            type="button"
+            className="danger"
+            onClick={() => setConfirmingDelete(true)}
+            disabled={saving}
+          >
+            Delete
+          </button>
+        )}
       </div>
 
       {!ready && <p className="hint">Both sides need some words before the card can be saved.</p>}
+
+      {card && !isOwner && (
+        <p className="hint">
+          Cards can only be deleted by the owner of the app. You can correct this
+          one, or file it wherever you like.
+        </p>
+      )}
+
+      {confirmingDelete && card && (
+        <div className="confirm" role="alertdialog" aria-label="Confirm delete">
+          <p>
+            <strong>
+              Delete &ldquo;{card.portuguese.text.split('\n')[0]}&rdquo; for everyone?
+            </strong>
+          </p>
+          <p>
+            This removes the card from the shared pool, along with how everyone has
+            filed it. It cannot be undone.
+          </p>
+          <div className="button-row">
+            <button type="button" className="danger" onClick={onDelete} disabled={saving}>
+              Yes, delete it for everyone
+            </button>
+            <button type="button" className="secondary" onClick={() => setConfirmingDelete(false)}>
+              Keep it
+            </button>
+          </div>
+        </div>
+      )}
     </form>
   )
 }

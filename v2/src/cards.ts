@@ -122,3 +122,24 @@ export async function updateCard(
   if (error) throw new Error(error.message)
   return toCard(data as CardRow)
 }
+
+/**
+ * Remove a card from the shared pool. Owner only.
+ *
+ * The database refuses this for anyone else - but refusing a delete does NOT
+ * produce an error. Row level security filters rows rather than rejecting the
+ * statement, so a non-owner's delete quietly matches nothing and reports
+ * success. Taking that at face value would remove the card from their screen
+ * and leave it in the database, to reappear on the next reload.
+ *
+ * So the deleted rows are asked for back, and an empty result is treated as
+ * the refusal it actually is.
+ */
+export async function deleteCard(cardId: string): Promise<void> {
+  const { data, error } = await supabase.from('cards').delete().eq('id', cardId).select('id')
+
+  if (error) throw new Error(error.message)
+  if (!data || data.length === 0) {
+    throw new Error('The database would not delete that card. Only the owner can delete cards.')
+  }
+}
