@@ -222,6 +222,7 @@ export function useLibrary(userId: string) {
     loading,
     error,
     dismissError: () => setError(null),
+    refresh: reload,
     fileCard,
     markViewed,
     saveCard,

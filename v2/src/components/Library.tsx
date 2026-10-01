@@ -6,6 +6,7 @@ import { CardLibrary } from './CardLibrary'
 import { CategoryManager } from './CategoryManager'
 import { CardEditor } from './CardEditor'
 import { Study } from './Study'
+import { SettingsPanel } from './SettingsPanel'
 import { ColourLegend } from './ColourLegend'
 
 type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
@@ -13,7 +14,7 @@ type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
 /** The signed-in app: shared cards, arranged your way. */
 export function Library({ session }: { session: Session }) {
   const library = useLibrary(session.user.id)
-  const [showCategories, setShowCategories] = useState(false)
+  const [panel, setPanel] = useState<'categories' | 'settings' | null>(null)
   const [editing, setEditing] = useState<Editing>(null)
   const [saving, setSaving] = useState(false)
   const [studying, setStudying] = useState(false)
@@ -101,14 +102,26 @@ export function Library({ session }: { session: Session }) {
         <button
           type="button"
           className="secondary"
-          aria-expanded={showCategories}
-          onClick={() => setShowCategories((shown) => !shown)}
+          aria-expanded={panel === 'categories'}
+          onClick={() => setPanel((open) => (open === 'categories' ? null : 'categories'))}
         >
-          {showCategories ? 'Hide categories' : 'My categories'}
+          My categories
+        </button>
+        <button
+          type="button"
+          className="secondary"
+          aria-expanded={panel === 'settings'}
+          onClick={() => setPanel((open) => (open === 'settings' ? null : 'settings'))}
+        >
+          Settings
         </button>
       </div>
 
-      {showCategories && (
+      {panel === 'settings' && library.profile && (
+        <SettingsPanel profile={library.profile} onSaved={library.refresh} />
+      )}
+
+      {panel === 'categories' && (
         <CategoryManager
           categories={library.categories}
           cards={library.cards}
