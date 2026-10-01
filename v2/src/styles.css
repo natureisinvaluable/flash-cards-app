@@ -351,6 +351,7 @@ button.secondary {
    --------------------------------------------------------------------------- */
 
 .toolbar {
+  margin-top: 1.75rem;
   margin-bottom: 1.5rem;
 }
 
@@ -809,4 +810,11 @@ a {
 
 .pool-note {
   margin: 0 0 1rem;
+}
+
+/* A reminder that editing is not a private act in v2. */
+.shared-warning {
+  background: #eef3f8;
+  border: 1px solid var(--accent);
+  margin-top: 0;
 }

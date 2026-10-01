@@ -19,11 +19,13 @@ export function CardLibrary({
   categories,
   states,
   onFile,
+  onEdit,
 }: {
   cards: Card[]
   categories: Category[]
   states: Record<string, CardState>
   onFile: (cardId: string, categoryId: string | null) => void
+  onEdit: (card: Card) => void
 }) {
   const categoryOf = (card: Card): string | null => states[card.id]?.categoryId ?? null
 
@@ -56,12 +58,19 @@ export function CardLibrary({
               <ul className="card-grid">
                 {group.cards.map((card) => (
                   <li key={card.id} className="card">
-                    <span className="card-portuguese">
-                      <ColouredText side={card.portuguese} />
-                    </span>
-                    <span className="card-english">
-                      <ColouredText side={card.english} />
-                    </span>
+                    <button
+                      type="button"
+                      className="card-open"
+                      onClick={() => onEdit(card)}
+                      title="Correct this card"
+                    >
+                      <span className="card-portuguese">
+                        <ColouredText side={card.portuguese} />
+                      </span>
+                      <span className="card-english">
+                        <ColouredText side={card.english} />
+                      </span>
+                    </button>
 
                     <div className="move-row">
                       {categories

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { Card, CardState, Category } from './types'
-import { fetchCards } from './cards'
+import { fetchCards, createCard, updateCard } from './cards'
+import { fetchProfile, type Profile } from './profile'
 import { fetchCategories, addCategory, renameCategory, swapCategoryOrder, deleteCategory } from './categories'
 import { fetchCardStates, setCardCategory } from './cardStates'
 
@@ -14,6 +15,7 @@ import { fetchCardStates, setCardCategory } from './cardStates'
  * says it could not be moved.
  */
 export function useLibrary(userId: string) {
+  const [profile, setProfile] = useState<Profile | null>(null)
   const [cards, setCards] = useState<Card[]>([])
   const [categories, setCategories] = useState<Category[]>([])
   const [states, setStates] = useState<Record<string, CardState>>({})
@@ -22,11 +24,13 @@ export function useLibrary(userId: string) {
 
   const reload = useCallback(async () => {
     try {
-      const [loadedCards, loadedCategories, loadedStates] = await Promise.all([
+      const [loadedProfile, loadedCards, loadedCategories, loadedStates] = await Promise.all([
+        fetchProfile(userId),
         fetchCards(),
         fetchCategories(),
         fetchCardStates(),
       ])
+      setProfile(loadedProfile)
       setCards(loadedCards)
       setCategories(loadedCategories)
       setStates(loadedStates)
@@ -36,10 +40,35 @@ export function useLibrary(userId: string) {
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [userId])
 
   useEffect(() => {
     reload()
+  }, [reload])
+
+  /**
+   * Pick up other people's changes when you come back to the tab.
+   *
+   * The cards are shared, but the app only reads them when it starts - so a
+   * card a friend adds while your tab sits open stays invisible until you
+   * reload. Refreshing when the window regains focus covers the ordinary case
+   * of switching between devices or browsers without anyone needing to know
+   * that a reload was required.
+   *
+   * This is not live updating: two people with the app open side by side still
+   * will not see each other type. That needs a live connection to the database
+   * and is a bigger change than it looks.
+   */
+  useEffect(() => {
+    function refreshOnReturn() {
+      if (document.visibilityState === 'visible') reload()
+    }
+    window.addEventListener('focus', refreshOnReturn)
+    document.addEventListener('visibilitychange', refreshOnReturn)
+    return () => {
+      window.removeEventListener('focus', refreshOnReturn)
+      document.removeEventListener('visibilitychange', refreshOnReturn)
+    }
   }, [reload])
 
   const fileCard = useCallback(
@@ -121,7 +150,30 @@ export function useLibrary(userId: string) {
     [reload, userId],
   )
 
+  const saveCard = useCallback(
+    async (
+      existing: Card | null,
+      english: Card['english'],
+      portuguese: Card['portuguese'],
+      categoryId: string | null,
+    ) => {
+      const saved = existing
+        ? await updateCard(existing.id, english, portuguese)
+        : await createCard(userId, english, portuguese)
+
+      setCards((current) =>
+        existing ? current.map((c) => (c.id === saved.id ? saved : c)) : [saved, ...current],
+      )
+
+      // The category is the creator's own filing, not part of the shared card.
+      const alreadyThere = (states[saved.id]?.categoryId ?? null) === categoryId
+      if (!alreadyThere) await fileCard(saved.id, categoryId)
+    },
+    [fileCard, states, userId],
+  )
+
   return {
+    profile,
     cards,
     categories: [...categories].sort((a, b) => a.sortOrder - b.sortOrder),
     states,
@@ -129,6 +181,7 @@ export function useLibrary(userId: string) {
     error,
     dismissError: () => setError(null),
     fileCard,
+    saveCard,
     createCategory,
     rename,
     move,

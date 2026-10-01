@@ -1,4 +1,5 @@
 import type { Card, CardSide, ColourSpan } from './types'
+import { newId } from './ids'
 import { supabase } from './supabase'
 
 /**
@@ -63,4 +64,61 @@ export async function fetchCards(): Promise<Card[]> {
 
   if (error) throw new Error(error.message)
   return (data as CardRow[]).map(toCard)
+}
+
+/**
+ * Add a card to the shared pool.
+ *
+ * The card belongs to everyone immediately - there is no private draft state.
+ * `created_by` records who added it, which the database also insists matches
+ * the person making the request.
+ */
+export async function createCard(
+  userId: string,
+  english: CardSide,
+  portuguese: CardSide,
+): Promise<Card> {
+  const { data, error } = await supabase
+    .from('cards')
+    .insert({
+      id: newId(),
+      english_text: english.text,
+      english_spans: english.spans,
+      portuguese_text: portuguese.text,
+      portuguese_spans: portuguese.spans,
+      created_by: userId,
+    })
+    .select('id, english_text, english_spans, portuguese_text, portuguese_spans, created_by, created_at, updated_at')
+    .single()
+
+  if (error) throw new Error(error.message)
+  return toCard(data as CardRow)
+}
+
+/**
+ * Correct a card.
+ *
+ * Anyone signed in may do this, and the change is seen by everyone. That is
+ * deliberate - a shared pool with a shared spelling mistake in it helps nobody
+ * - but it does mean an edit is not a private act, and the editor says so.
+ */
+export async function updateCard(
+  cardId: string,
+  english: CardSide,
+  portuguese: CardSide,
+): Promise<Card> {
+  const { data, error } = await supabase
+    .from('cards')
+    .update({
+      english_text: english.text,
+      english_spans: english.spans,
+      portuguese_text: portuguese.text,
+      portuguese_spans: portuguese.spans,
+    })
+    .eq('id', cardId)
+    .select('id, english_text, english_spans, portuguese_text, portuguese_spans, created_by, created_at, updated_at')
+    .single()
+
+  if (error) throw new Error(error.message)
+  return toCard(data as CardRow)
 }
