@@ -3,7 +3,7 @@ import { isConfigured } from './config'
 import { useSession } from './useSession'
 import { SignIn } from './components/SignIn'
 import { AccountPanel } from './components/AccountPanel'
-import { SharedCards } from './components/SharedCards'
+import { Library } from './components/Library'
 
 export default function App() {
   const { session, loading } = useSession()
@@ -34,13 +34,13 @@ export default function App() {
         <>
           <AccountPanel session={session} />
 
-          <SharedCards />
+          <Library session={session} />
 
           <section className="panel">
             <p>
               <strong>Your own cards are not here yet.</strong> They are still in
               version 1, working as usual, and will be brought across once the
-              rest of v2 is built.
+              rest of v2 is built. Adding, editing and studying are still to come.
             </p>
             <div className="button-row">
               <button type="button" className="secondary" onClick={() => supabase.auth.signOut()}>

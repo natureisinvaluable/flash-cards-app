@@ -37,3 +37,23 @@ export interface Card {
   createdAt: string
   updatedAt: string
 }
+
+/** One of your own confidence buckets. Yours alone; nobody else sees it. */
+export interface Category {
+  id: string
+  name: string
+  sortOrder: number
+}
+
+/**
+ * What YOU think of one card.
+ *
+ * A card with no state, or with a null category, is unsorted - you have not
+ * judged it yet. That is the normal condition of a card somebody else just
+ * added, so it is a real state rather than a gap.
+ */
+export interface CardState {
+  cardId: string
+  categoryId: string | null
+  lastViewedAt: string | null
+}
