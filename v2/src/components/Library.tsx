@@ -7,6 +7,7 @@ import { CategoryManager } from './CategoryManager'
 import { CardEditor } from './CardEditor'
 import { Study } from './Study'
 import { SettingsPanel } from './SettingsPanel'
+import { ImportPanel } from './ImportPanel'
 import { ColourLegend } from './ColourLegend'
 
 type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
@@ -14,7 +15,7 @@ type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
 /** The signed-in app: shared cards, arranged your way. */
 export function Library({ session }: { session: Session }) {
   const library = useLibrary(session.user.id)
-  const [panel, setPanel] = useState<'categories' | 'settings' | null>(null)
+  const [panel, setPanel] = useState<'categories' | 'settings' | 'import' | null>(null)
   const [editing, setEditing] = useState<Editing>(null)
   const [saving, setSaving] = useState(false)
   const [studying, setStudying] = useState(false)
@@ -115,7 +116,26 @@ export function Library({ session }: { session: Session }) {
         >
           Settings
         </button>
+        {library.profile?.isOwner && (
+          <button
+            type="button"
+            className="secondary"
+            aria-expanded={panel === 'import'}
+            onClick={() => setPanel((open) => (open === 'import' ? null : 'import'))}
+          >
+            Import
+          </button>
+        )}
       </div>
+
+      {panel === 'import' && library.profile?.isOwner && (
+        <ImportPanel
+          userId={session.user.id}
+          cards={library.cards}
+          categories={library.categories}
+          onDone={library.refresh}
+        />
+      )}
 
       {panel === 'settings' && library.profile && (
         <SettingsPanel

@@ -831,3 +831,13 @@ a {
   gap: 0.4rem;
   padding: 0.3rem 0;
 }
+
+.import-mapping {
+  margin: 0 0 0.75rem;
+  padding-left: 1.3rem;
+  font-size: 0.9rem;
+}
+
+.import-mapping li {
+  margin-bottom: 0.2rem;
+}
