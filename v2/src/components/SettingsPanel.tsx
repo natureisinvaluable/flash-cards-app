@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import type { Card, CardState, Category } from '../types'
 import type { ColourMeaning, Member, Profile } from '../profile'
 import { fetchMembers, updateColourMeanings, updateDisplayName } from '../profile'
+import { downloadBackup } from '../backup'
 
 /**
  * Your own settings: what the colours mean to you, and what you are called.
@@ -13,7 +15,19 @@ import { fetchMembers, updateColourMeanings, updateDisplayName } from '../profil
  * v1 that distinction did not matter because saving was instant and local;
  * here every save is a request across the internet.
  */
-export function SettingsPanel({ profile, onSaved }: { profile: Profile; onSaved: () => void }) {
+export function SettingsPanel({
+  profile,
+  cards,
+  categories,
+  states,
+  onSaved,
+}: {
+  profile: Profile
+  cards: Card[]
+  categories: Category[]
+  states: Record<string, CardState>
+  onSaved: () => void
+}) {
   const [name, setName] = useState(profile.displayName)
   const [meanings, setMeanings] = useState<ColourMeaning[]>(profile.colourMeanings)
   const [members, setMembers] = useState<Member[] | null>(null)
@@ -97,6 +111,26 @@ export function SettingsPanel({ profile, onSaved }: { profile: Profile; onSaved:
           </li>
         ))}
       </ul>
+
+      <h3>Save a copy</h3>
+      <p className="panel-intro">
+        The shared cards live in one database on the internet, and this file is
+        the only copy that lives anywhere else. It holds every card, filed the
+        way <em>you</em> have filed it.
+      </p>
+      <div className="button-row">
+        <button
+          type="button"
+          onClick={() => downloadBackup(cards, categories, states, profile.colourMeanings)}
+        >
+          Download a copy of everything
+        </button>
+      </div>
+      <p className="hint">
+        The file is in version 1&rsquo;s format, so it can also be opened there
+        &mdash; version 1 runs entirely in your browser and needs no database at
+        all. These cards are not trapped in here.
+      </p>
 
       <h3>Who else is here</h3>
       {members === null ? (

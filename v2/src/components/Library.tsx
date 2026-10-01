@@ -118,7 +118,13 @@ export function Library({ session }: { session: Session }) {
       </div>
 
       {panel === 'settings' && library.profile && (
-        <SettingsPanel profile={library.profile} onSaved={library.refresh} />
+        <SettingsPanel
+          profile={library.profile}
+          cards={library.cards}
+          categories={library.categories}
+          states={library.states}
+          onSaved={library.refresh}
+        />
       )}
 
       {panel === 'categories' && (
