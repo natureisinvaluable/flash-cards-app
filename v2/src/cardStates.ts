@@ -34,18 +34,27 @@ export async function fetchCardStates(): Promise<Record<string, CardState>> {
 }
 
 /**
- * File a card into one of your categories, or into nothing.
+ * Write your view of a card. BOTH fields are always sent.
  *
- * Upsert rather than insert-or-update: the row may not exist yet, because a
- * card you have never judged has no state at all.
+ * The row may not exist yet - a card you have never judged has no state at all
+ * - so this is an upsert. Sending only the field being changed would risk the
+ * other being wiped, which during a study session would mean quietly unfiling
+ * every card as you looked at it. Passing both costs nothing and removes the
+ * possibility.
  */
-export async function setCardCategory(
+export async function upsertCardState(
   userId: string,
   cardId: string,
-  categoryId: string | null,
+  state: { categoryId: string | null; lastViewedAt: string | null },
 ): Promise<void> {
-  const { error } = await supabase
-    .from('card_states')
-    .upsert({ user_id: userId, card_id: cardId, category_id: categoryId }, { onConflict: 'user_id,card_id' })
+  const { error } = await supabase.from('card_states').upsert(
+    {
+      user_id: userId,
+      card_id: cardId,
+      category_id: state.categoryId,
+      last_viewed_at: state.lastViewedAt,
+    },
+    { onConflict: 'user_id,card_id' },
+  )
   if (error) throw new Error(error.message)
 }

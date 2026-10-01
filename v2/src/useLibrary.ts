@@ -3,7 +3,7 @@ import type { Card, CardState, Category } from './types'
 import { fetchCards, createCard, updateCard, deleteCard } from './cards'
 import { fetchProfile, type Profile } from './profile'
 import { fetchCategories, addCategory, renameCategory, swapCategoryOrder, deleteCategory } from './categories'
-import { fetchCardStates, setCardCategory } from './cardStates'
+import { fetchCardStates, upsertCardState } from './cardStates'
 
 /**
  * Everything on screen: the shared cards, your categories, and your view of
@@ -79,7 +79,10 @@ export function useLibrary(userId: string) {
         [cardId]: { cardId, categoryId, lastViewedAt: previous?.lastViewedAt ?? null },
       }))
       try {
-        await setCardCategory(userId, cardId, categoryId)
+        await upsertCardState(userId, cardId, {
+          categoryId,
+          lastViewedAt: previous?.lastViewedAt ?? null,
+        })
       } catch (e) {
         setStates((current) => {
           const reverted = { ...current }
@@ -88,6 +91,31 @@ export function useLibrary(userId: string) {
           return reverted
         })
         setError(`Could not move that card: ${(e as Error).message}`)
+      }
+    },
+    [states, userId],
+  )
+
+  /**
+   * Note that you have just looked at a card, so "least recently seen" can
+   * order a later session.
+   *
+   * Deliberately quiet: a failure here is not worth interrupting a study
+   * session for. The worst case is a card keeping an older date and coming
+   * round again sooner than it needed to.
+   */
+  const markViewed = useCallback(
+    async (cardId: string) => {
+      const seenAt = new Date().toISOString()
+      const categoryId = states[cardId]?.categoryId ?? null
+      setStates((current) => ({
+        ...current,
+        [cardId]: { cardId, categoryId, lastViewedAt: seenAt },
+      }))
+      try {
+        await upsertCardState(userId, cardId, { categoryId, lastViewedAt: seenAt })
+      } catch {
+        // left as it was on screen; it will correct itself on the next load
       }
     },
     [states, userId],
@@ -195,6 +223,7 @@ export function useLibrary(userId: string) {
     error,
     dismissError: () => setError(null),
     fileCard,
+    markViewed,
     saveCard,
     removeCard,
     createCategory,

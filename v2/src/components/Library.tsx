@@ -5,6 +5,7 @@ import { useLibrary } from '../useLibrary'
 import { CardLibrary } from './CardLibrary'
 import { CategoryManager } from './CategoryManager'
 import { CardEditor } from './CardEditor'
+import { Study } from './Study'
 import { ColourLegend } from './ColourLegend'
 
 type Editing = { mode: 'new' } | { mode: 'edit'; card: Card } | null
@@ -15,6 +16,8 @@ export function Library({ session }: { session: Session }) {
   const [showCategories, setShowCategories] = useState(false)
   const [editing, setEditing] = useState<Editing>(null)
   const [saving, setSaving] = useState(false)
+  const [studying, setStudying] = useState(false)
+  const [search, setSearch] = useState('')
 
   if (library.loading) return <p className="hint">Loading&hellip;</p>
 
@@ -43,6 +46,19 @@ export function Library({ session }: { session: Session }) {
     } finally {
       setSaving(false)
     }
+  }
+
+  if (studying) {
+    return (
+      <Study
+        cards={library.cards}
+        categories={library.categories}
+        states={library.states}
+        onFile={library.fileCard}
+        onViewed={library.markViewed}
+        onExit={() => setStudying(false)}
+      />
+    )
   }
 
   if (editing) {
@@ -76,7 +92,10 @@ export function Library({ session }: { session: Session }) {
       )}
 
       <div className="button-row toolbar">
-        <button type="button" onClick={() => setEditing({ mode: 'new' })}>
+        <button type="button" onClick={() => setStudying(true)} disabled={library.cards.length === 0}>
+          Study
+        </button>
+        <button type="button" className="secondary" onClick={() => setEditing({ mode: 'new' })}>
           Add a card
         </button>
         <button
@@ -101,12 +120,26 @@ export function Library({ session }: { session: Session }) {
         />
       )}
 
+      <div className="search-field">
+        <label className="field-label" htmlFor="search">
+          Search
+        </label>
+        <input
+          id="search"
+          type="search"
+          value={search}
+          placeholder="English or Portuguese&hellip;"
+          onChange={(event) => setSearch(event.target.value)}
+        />
+      </div>
+
       <ColourLegend meanings={colourMeanings} />
 
       <CardLibrary
         cards={library.cards}
         categories={library.categories}
         states={library.states}
+        search={search}
         onFile={library.fileCard}
         onEdit={(card) => setEditing({ mode: 'edit', card })}
       />

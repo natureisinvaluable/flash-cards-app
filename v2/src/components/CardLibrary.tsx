@@ -1,4 +1,5 @@
 import type { Card, CardState, Category } from '../types'
+import { cardMatches } from '../search'
 import { ColouredText } from './ColouredText'
 
 /** The unsorted bucket. Not a real category - the absence of one. */
@@ -18,32 +19,57 @@ export function CardLibrary({
   cards,
   categories,
   states,
+  search,
   onFile,
   onEdit,
 }: {
   cards: Card[]
   categories: Category[]
   states: Record<string, CardState>
+  search: string
   onFile: (cardId: string, categoryId: string | null) => void
   onEdit: (card: Card) => void
 }) {
   const categoryOf = (card: Card): string | null => states[card.id]?.categoryId ?? null
 
+  const isSearching = search.trim().length > 0
+  const matching = cards.filter((card) => cardMatches(card, search))
+
+  if (isSearching && matching.length === 0) {
+    return (
+      <p className="empty">
+        No cards match &ldquo;{search.trim()}&rdquo;. Searching ignores accents, so{' '}
+        <em>cao</em> will find <em>c&atilde;o</em>.
+      </p>
+    )
+  }
+
   const groups: { id: string | null; name: string; note?: string; cards: Card[] }[] = [
-    { ...UNSORTED, cards: cards.filter((c) => categoryOf(c) === null) },
+    { ...UNSORTED, cards: matching.filter((c) => categoryOf(c) === null) },
     ...categories.map((category) => ({
       id: category.id as string | null,
       name: category.name,
-      cards: cards.filter((c) => categoryOf(c) === category.id),
+      cards: matching.filter((c) => categoryOf(c) === category.id),
     })),
   ]
 
   return (
     <div>
+      {isSearching && (
+        <p className="search-summary">
+          {matching.length} {matching.length === 1 ? 'card matches' : 'cards match'} &ldquo;
+          {search.trim()}&rdquo;
+        </p>
+      )}
+
       {groups.map((group) => {
         // An empty New bucket means everything is filed, which is worth not
         // cluttering the page with.
         if (group.id === null && group.cards.length === 0) return null
+
+        // While searching, skip categories with no matches rather than
+        // padding the results with empty headings.
+        if (isSearching && group.cards.length === 0) return null
 
         return (
           <section key={group.id ?? 'unsorted'} className="category">
