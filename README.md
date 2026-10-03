@@ -4,11 +4,23 @@ A small, private flashcard app for learning **European Portuguese**. Each card h
 side and Portuguese on the other. You can colour individual words as a memory aid, file cards by how
 well you know them, and study them shuffled.
 
-**The live app:** https://natureisinvaluable.github.io/flash-cards-app/
+## Two versions, both live
+
+| | Address | What it is |
+|---|---|---|
+| **Version 2** | [/v2/](https://natureisinvaluable.github.io/flash-cards-app/v2/) | **The one to use.** Shared between a few friends. One pool of cards, but each person keeps their own sense of which ones they know. Needs a sign-in and an internet connection. |
+| **Version 1** | [/](https://natureisinvaluable.github.io/flash-cards-app/) | Kept running. For one person, no accounts, no server — everything lives in your own browser. |
+
+They are **separate collections**. A card added to one does not appear in the other.
+
+Version 1 is deliberately kept alive as an escape hatch: it needs no database at all, and a version
+2 export opens straight into it. The cards are not trapped in any service.
+
+The rest of this file is about **version 1**. Version 2 is documented in `v2/CLAUDE.md`.
 
 ---
 
-## The one thing to know
+## The one thing to know about version 1
 
 **Your cards are stored inside your browser, on the device that created them.** They are never sent
 anywhere. That is what makes the app free to run, private, and free of logins.
@@ -53,7 +65,7 @@ the same wifi.
 **Publishing is automatic.** Anything committed to the `main` branch appears on the live site within
 a minute or two. There is nothing to run by hand.
 
-## How it is put together
+## How version 1 is put together
 
 Deliberately as little as possible:
 
@@ -63,5 +75,19 @@ Deliberately as little as possible:
 - **Hosted free on GitHub Pages.** Running cost: nothing.
 
 `CLAUDE.md` holds the architecture, the constraints and the working rules, and is read automatically
-by Claude Code at the start of each session. `PRODUCT.md` is the product brief. Read those two
-before changing anything.
+by Claude Code at the start of each session. `PRODUCT.md` is the version 1 brief and `PRODUCTv2.md`
+the version 2 brief. Read those before changing anything.
+
+## Version 2
+
+Lives in `v2/`, with its own dependencies and its own build. It shares no code with version 1, on
+purpose — so that work on version 2 can never break version 1.
+
+- React and TypeScript, built by Vite, same as version 1.
+- **Supabase** for the database and sign-in: cards are shared, and the database itself decides who
+  may see and change what.
+- Signing in is by email link. Sign-ups are closed; the owner invites people.
+- Only the owner can delete a card, which protects the shared pool.
+
+`v2/CLAUDE.md` has the full picture, including the access rules, which are the part worth
+understanding before changing anything there.

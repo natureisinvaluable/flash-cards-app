@@ -6,16 +6,22 @@ Guidance for Claude Code sessions working in this repository.
 
 | | Where | Status |
 |---|---|---|
-| **v1** | repository root (`src/`, `index.html`) | **Frozen and in daily use.** Do not change it. |
-| **v2** | `v2/` | Under construction. Has its own `v2/CLAUDE.md` — read it before working there. |
+| **v1** | repository root (`src/`, `index.html`) | **Frozen.** Do not change it. |
+| **v2** | `v2/` | **Live and in daily use.** Has its own `v2/CLAUDE.md` — read it before working there. |
+
+**v2 is where active work happens.** It is complete against `PRODUCTv2.md` and is what the owner
+and her friends use. v1 is kept running because `PRODUCTv2.md` requires it and because it is the
+escape hatch: it needs no server, and a v2 export opens straight into it.
+
+The two collections drifted apart the moment the owner's cards were imported into v2. A card added
+to one does not appear in the other.
 
 `PRODUCT.md` is the v1 brief; `PRODUCTv2.md` is the v2 brief.
 
-**v1 is frozen on purpose.** The owner uses it every day and `PRODUCTv2.md` requires that it stays
-live and working. v2 began as a copy of v1 and diverges from there. The duplication is deliberate:
-v1 needs no further changes, and full separation means no v2 work can ever break the app the owner
-is relying on. **Do not refactor the two together, extract shared code between them, or "tidy up"
-the duplication.**
+**v1 is frozen on purpose.** `PRODUCTv2.md` requires that it stays live and working. v2 began as a
+copy of v1 and diverges from there. The duplication is deliberate: v1 needs no further changes, and
+full separation means no v2 work can ever break it. **Do not refactor the two together, extract
+shared code between them, or "tidy up" the duplication.**
 
 The only file both share is the deployment workflow, which builds each app and publishes v1 at
 `/flash-cards-app/` and v2 at `/flash-cards-app/v2/`.
@@ -38,7 +44,7 @@ When something carries a real risk — data loss especially — state it plainly
 
 ## Current state
 
-Version 1 is complete and live at https://natureisinvaluable.github.io/flash-cards-app/
+Version 1 is complete, frozen and live at https://natureisinvaluable.github.io/flash-cards-app/
 
 Built: the card list, the editor with word colouring and accent buttons, editable categories with
 one-tap re-filing, study mode, search, settings, and backup/restore. See "Deliberately postponed"

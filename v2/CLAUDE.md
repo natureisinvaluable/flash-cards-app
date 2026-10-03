@@ -7,6 +7,21 @@ a whole; read that first. `PRODUCTv2.md` is the brief and is the source of truth
 problems in plain English. When something carries a real risk — data loss, or one user affecting
 another — say so plainly rather than burying it.
 
+## Current state
+
+**Complete against `PRODUCTv2.md`, live, and in daily use** at
+https://natureisinvaluable.github.io/flash-cards-app/v2/
+
+Built: accounts by email link, the shared card pool, per-person categories and filing, adding and
+correcting cards with colours and accents, owner-only delete, study with per-person recency
+ordering, search, settings, export, and a one-off import of a v1 collection.
+
+The owner's 286 cards were imported on 1 October 2026. Her filing came with them; everyone else
+sees those cards as unsorted.
+
+Database migrations live in `supabase/migrations/` and are applied by hand in the Supabase SQL
+editor; `supabase/seed/` holds one-off data changes that have already been run.
+
 ## What v2 is
 
 The same European Portuguese flashcard app, shared by a small group of friends.
