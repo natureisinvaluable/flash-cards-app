@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Card, CardState, Category } from './types'
 import { fetchCards, createCard, updateCard, deleteCard } from './cards'
 import { fetchProfile, type Profile } from './profile'
+import { loadCache, saveCache } from './offlineCache'
 import { fetchCategories, addCategory, renameCategory, swapCategoryOrder, deleteCategory } from './categories'
 import { fetchCardStates, upsertCardState } from './cardStates'
 
@@ -21,6 +22,9 @@ export function useLibrary(userId: string) {
   const [states, setStates] = useState<Record<string, CardState>>({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  /** True when what is on screen came from the device, not the database. */
+  const [offline, setOffline] = useState(false)
+  const [cachedAt, setCachedAt] = useState<string | null>(null)
 
   const reload = useCallback(async () => {
     try {
@@ -35,8 +39,30 @@ export function useLibrary(userId: string) {
       setCategories(loadedCategories)
       setStates(loadedStates)
       setError(null)
+      setOffline(false)
+      setCachedAt(null)
+      saveCache(userId, {
+        profile: loadedProfile,
+        cards: loadedCards,
+        categories: loadedCategories,
+        states: loadedStates,
+      })
     } catch (e) {
-      setError((e as Error).message)
+      // The database could not be reached. Fall back to the copy on the device
+      // so a study session on a plane is still possible, and say plainly that
+      // is what has happened.
+      const cached = loadCache(userId)
+      if (cached) {
+        setProfile(cached.profile)
+        setCards(cached.cards)
+        setCategories(cached.categories)
+        setStates(cached.states)
+        setError(null)
+        setOffline(true)
+        setCachedAt(cached.savedAt)
+      } else {
+        setError((e as Error).message)
+      }
     } finally {
       setLoading(false)
     }
@@ -63,9 +89,11 @@ export function useLibrary(userId: string) {
     function refreshOnReturn() {
       if (document.visibilityState === 'visible') reload()
     }
+    window.addEventListener('online', refreshOnReturn)
     window.addEventListener('focus', refreshOnReturn)
     document.addEventListener('visibilitychange', refreshOnReturn)
     return () => {
+      window.removeEventListener('online', refreshOnReturn)
       window.removeEventListener('focus', refreshOnReturn)
       document.removeEventListener('visibilitychange', refreshOnReturn)
     }
@@ -90,7 +118,11 @@ export function useLibrary(userId: string) {
           else delete reverted[cardId]
           return reverted
         })
-        setError(`Could not move that card: ${(e as Error).message}`)
+        setError(
+          navigator.onLine
+            ? `Could not move that card: ${(e as Error).message}`
+            : 'You are offline, so that change was not saved. It will be forgotten.',
+        )
       }
     },
     [states, userId],
@@ -221,6 +253,8 @@ export function useLibrary(userId: string) {
     states,
     loading,
     error,
+    offline,
+    cachedAt,
     dismissError: () => setError(null),
     refresh: reload,
     fileCard,

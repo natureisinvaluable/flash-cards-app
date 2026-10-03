@@ -841,3 +841,11 @@ a {
 .import-mapping li {
   margin-bottom: 0.2rem;
 }
+
+/* Shown when the cards on screen came from the device, not the database. */
+.offline-note {
+  background: #fdf1e3;
+  border: 1px solid var(--card-orange);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

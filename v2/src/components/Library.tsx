@@ -52,14 +52,22 @@ export function Library({ session }: { session: Session }) {
 
   if (studying) {
     return (
-      <Study
-        cards={library.cards}
-        categories={library.categories}
-        states={library.states}
-        onFile={library.fileCard}
-        onViewed={library.markViewed}
-        onExit={() => setStudying(false)}
-      />
+      <>
+        {library.offline && (
+          <p className="notice offline-note" role="status">
+            <strong>Offline.</strong> Study works, but how you file these cards
+            will not be saved.
+          </p>
+        )}
+        <Study
+          cards={library.cards}
+          categories={library.categories}
+          states={library.states}
+          onFile={library.fileCard}
+          onViewed={library.markViewed}
+          onExit={() => setStudying(false)}
+        />
+      </>
     )
   }
 
@@ -84,6 +92,16 @@ export function Library({ session }: { session: Session }) {
 
   return (
     <>
+      {library.offline && (
+        <p className="notice offline-note" role="status">
+          <strong>You are offline.</strong> These are the cards as they were when
+          you last had a connection
+          {library.cachedAt && ` (${new Date(library.cachedAt).toLocaleString()})`}. You
+          can study as normal, but anything you file or change will{' '}
+          <strong>not be saved</strong>.
+        </p>
+      )}
+
       {library.error && (
         <p className="notice warning" role="alert">
           {library.error}{' '}
