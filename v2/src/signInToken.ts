@@ -14,9 +14,17 @@ import type { EmailOtpType } from '@supabase/supabase-js'
  *    costs nothing and means nothing has to change here if that is ever set up.
  */
 
+/** Marks a transfer string so it cannot be confused with anything else. */
+export const TRANSFER_PREFIX = 'fcards1:'
+
+export function makeTransferCode(accessToken: string, refreshToken: string): string {
+  return TRANSFER_PREFIX + btoa(JSON.stringify({ a: accessToken, r: refreshToken }))
+}
+
 export type Parsed =
+  | { kind: 'transfer'; accessToken: string; refreshToken: string }
   | { kind: 'code'; token: string }
-  | { kind: 'link'; tokenHash: string; type: EmailOtpType }
+  | { kind: 'link'; tokenHash: string; typesToTry: EmailOtpType[] }
   | { kind: 'unusable'; reason: string }
 
 const EMAIL_TYPES: EmailOtpType[] = ['email', 'magiclink', 'signup', 'invite', 'recovery', 'email_change']
@@ -24,6 +32,22 @@ const EMAIL_TYPES: EmailOtpType[] = ['email', 'magiclink', 'signup', 'invite', '
 export function parseSignIn(input: string): Parsed {
   const text = input.trim()
   if (text.length === 0) return { kind: 'unusable', reason: 'Nothing was pasted.' }
+
+  // A session handed over from somewhere already signed in.
+  if (text.startsWith(TRANSFER_PREFIX)) {
+    try {
+      const payload = JSON.parse(atob(text.slice(TRANSFER_PREFIX.length))) as {
+        a?: string
+        r?: string
+      }
+      if (typeof payload.a === 'string' && typeof payload.r === 'string') {
+        return { kind: 'transfer', accessToken: payload.a, refreshToken: payload.r }
+      }
+    } catch {
+      // fall through to the message below
+    }
+    return { kind: 'unusable', reason: 'That transfer code is incomplete. Copy the whole of it.' }
+  }
 
   // A plain six-digit code.
   if (/^\d{6}$/.test(text)) return { kind: 'code', token: text }
@@ -53,8 +77,22 @@ export function parseSignIn(input: string): Parsed {
     return { kind: 'unusable', reason: 'That link has no sign-in token in it.' }
   }
 
+  /**
+   * The link says type=magiclink, but a token_hash is verified as type 'email'
+   * - that is what the documented example does. Passing 'magiclink' is
+   * rejected, and the rejection reads as "invalid or expired", which sends you
+   * looking for an expiry problem that is not there.
+   *
+   * Both are returned so the caller can try one and fall back to the other,
+   * rather than this guess being a single point of failure.
+   */
   const rawType = url.searchParams.get('type') ?? 'email'
-  const type = (EMAIL_TYPES as string[]).includes(rawType) ? (rawType as EmailOtpType) : 'email'
+  const linkType = (EMAIL_TYPES as string[]).includes(rawType)
+    ? (rawType as EmailOtpType)
+    : 'email'
 
-  return { kind: 'link', tokenHash, type }
+  const typesToTry: EmailOtpType[] =
+    linkType === 'email' ? ['email'] : ['email', linkType]
+
+  return { kind: 'link', tokenHash, typesToTry }
 }

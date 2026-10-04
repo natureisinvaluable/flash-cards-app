@@ -3,6 +3,8 @@ import type { Card, CardState, Category } from '../types'
 import type { ColourMeaning, Member, Profile } from '../profile'
 import { fetchMembers, updateColourMeanings, updateDisplayName } from '../profile'
 import { downloadBackup } from '../backup'
+import { supabase } from '../supabase'
+import { makeTransferCode } from '../signInToken'
 
 /**
  * Your own settings: what the colours mean to you, and what you are called.
@@ -33,6 +35,7 @@ export function SettingsPanel({
   const [members, setMembers] = useState<Member[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState(false)
+  const [transfer, setTransfer] = useState<string | null>(null)
 
   useEffect(() => {
     fetchMembers()
@@ -131,6 +134,51 @@ export function SettingsPanel({
         &mdash; version 1 runs entirely in your browser and needs no database at
         all. These cards are not trapped in here.
       </p>
+
+      <h3>Sign in on another device</h3>
+      <p className="panel-intro">
+        For getting into the app on a phone home screen, where a link opened in
+        the browser cannot sign you in. Copy this, paste it into the sign-in box
+        there, and you are in.
+      </p>
+      {transfer === null ? (
+        <button
+          type="button"
+          className="secondary"
+          onClick={async () => {
+            const { data } = await supabase.auth.getSession()
+            if (data.session) {
+              setTransfer(makeTransferCode(data.session.access_token, data.session.refresh_token))
+            } else {
+              setError('Could not read your session.')
+            }
+          }}
+        >
+          Show my transfer code
+        </button>
+      ) : (
+        <>
+          <textarea
+            readOnly
+            rows={3}
+            value={transfer}
+            aria-label="Transfer code"
+            onFocus={(event) => event.currentTarget.select()}
+          />
+          <p className="notice warning">
+            <strong>Treat this like a password.</strong> Anyone who has it is
+            signed in as you until you sign out. Do not send it to anyone.
+          </p>
+          <div className="button-row">
+            <button type="button" onClick={() => navigator.clipboard?.writeText(transfer)}>
+              Copy it
+            </button>
+            <button type="button" className="secondary" onClick={() => setTransfer(null)}>
+              Hide it
+            </button>
+          </div>
+        </>
+      )}
 
       <h3>Who else is here</h3>
       {members === null ? (

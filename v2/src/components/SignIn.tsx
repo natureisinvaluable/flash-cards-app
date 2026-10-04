@@ -62,20 +62,50 @@ export function SignIn() {
     setBusy(true)
     setError(null)
 
-    const { error } =
-      parsed.kind === 'link'
-        ? await supabase.auth.verifyOtp({ token_hash: parsed.tokenHash, type: parsed.type })
-        : await supabase.auth.verifyOtp({ email: email.trim(), token: parsed.token, type: 'email' })
+    let lastError: string | null = null
+
+    if (parsed.kind === 'transfer') {
+      const { error } = await supabase.auth.setSession({
+        access_token: parsed.accessToken,
+        refresh_token: parsed.refreshToken,
+      })
+      setBusy(false)
+      if (!error) return
+      setError(`That transfer code was not accepted: "${error.message}". Make a fresh one.`)
+      return
+    }
+
+    if (parsed.kind === 'link') {
+      for (const type of parsed.typesToTry) {
+        const { error } = await supabase.auth.verifyOtp({ token_hash: parsed.tokenHash, type })
+        if (!error) {
+          setBusy(false)
+          return // the app notices the new session and this screen disappears
+        }
+        lastError = error.message
+      }
+    } else {
+      const { error } = await supabase.auth.verifyOtp({
+        email: email.trim(),
+        token: parsed.token,
+        type: 'email',
+      })
+      if (!error) {
+        setBusy(false)
+        return
+      }
+      lastError = error.message
+    }
 
     setBusy(false)
-    if (error) {
-      setError(
-        /expired|invalid|not found/i.test(error.message)
-          ? 'That was not accepted. Sign-in links work only once and expire after an hour — send yourself a new email, and copy the link without opening it.'
-          : error.message,
-      )
-    }
-    // On success the app notices the new session and this screen disappears.
+    // The real message is shown, not replaced. Supabase says "invalid or has
+    // expired" for both a used link and a malformed one, and hiding that
+    // behind friendlier wording sent us hunting for an expiry problem that
+    // did not exist.
+    setError(
+      `Sign-in failed. The database said: "${lastError}". ` +
+        'If you tapped the link rather than copying it, it has been used up — send yourself a new one.',
+    )
   }
 
   if (sent) {
@@ -112,6 +142,11 @@ export function SignIn() {
             <strong>Copy Link</strong> &mdash; do not tap it. Tapping opens it in
             your browser, which signs in your browser rather than this app, and
             uses the link up.
+          </p>
+          <p className="hint">
+            This box also accepts a <strong>transfer code</strong>. If you are
+            already signed in in your browser, open Settings there and use
+            &ldquo;Sign in on another device&rdquo;.
           </p>
         </div>
 
