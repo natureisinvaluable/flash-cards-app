@@ -1,0 +1,1666 @@
+{
+  "app": "portuguese-flashcards",
+  "exportedAt": "2026-10-04T12:00:00.000Z",
+  "schemaVersion": 2,
+  "cards": [
+    {
+      "id": "starter-gostar-present",
+      "english": {
+        "text": "to like (gostar de)\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu gosto\ntu gostas\nele gosta\nnós gostamos\neles gostam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-gostar-past",
+      "english": {
+        "text": "to like (gostar de)\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu gostei\ntu gostaste\nele gostou\nnós gostámos\neles gostaram",
+        "spans": [
+          {
+            "start": 40,
+            "end": 42,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-gostar-imperfect",
+      "english": {
+        "text": "to like (gostar de)\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu gostava\ntu gostavas\nele gostava\nnós gostávamos\neles gostavam",
+        "spans": [
+          {
+            "start": 42,
+            "end": 44,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-comer-present",
+      "english": {
+        "text": "to eat\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu como\ntu comes\nele come\nnós comemos\neles comem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-comer-past",
+      "english": {
+        "text": "to eat\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu comi\ntu comeste\nele comeu\nnós comemos\neles comeram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-comer-imperfect",
+      "english": {
+        "text": "to eat\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu comia\ntu comias\nele comia\nnós comíamos\neles comiam",
+        "spans": [
+          {
+            "start": 35,
+            "end": 37,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-abrir-present",
+      "english": {
+        "text": "to open\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu abro\ntu abres\nele abre\nnós abrimos\neles abrem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-abrir-past",
+      "english": {
+        "text": "to open\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu abri\ntu abriste\nele abriu\nnós abrimos\neles abriram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-abrir-imperfect",
+      "english": {
+        "text": "to open\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu abria\ntu abrias\nele abria\nnós abríamos\neles abriam",
+        "spans": [
+          {
+            "start": 34,
+            "end": 37,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-preferir-present",
+      "english": {
+        "text": "to prefer\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu prefiro\ntu preferes\nele prefere\nnós preferimos\neles preferem",
+        "spans": [
+          {
+            "start": 3,
+            "end": 10,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-preferir-past",
+      "english": {
+        "text": "to prefer\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu preferi\ntu preferiste\nele preferiu\nnós preferimos\neles preferiram",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-preferir-imperfect",
+      "english": {
+        "text": "to prefer\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu preferia\ntu preferias\nele preferia\nnós preferíamos\neles preferiam",
+        "spans": [
+          {
+            "start": 47,
+            "end": 49,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-pagar-present",
+      "english": {
+        "text": "to pay\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu pago\ntu pagas\nele paga\nnós pagamos\neles pagam",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-pagar-past",
+      "english": {
+        "text": "to pay\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu paguei\ntu pagaste\nele pagou\nnós pagámos\neles pagaram",
+        "spans": [
+          {
+            "start": 3,
+            "end": 9,
+            "colour": "orange"
+          },
+          {
+            "start": 37,
+            "end": 39,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-pagar-imperfect",
+      "english": {
+        "text": "to pay\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu pagava\ntu pagavas\nele pagava\nnós pagávamos\neles pagavam",
+        "spans": [
+          {
+            "start": 38,
+            "end": 40,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-lembrar-se-present",
+      "english": {
+        "text": "to remember (lembrar-se de)\n— present",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu lembro-me\ntu lembras-te\nele lembra-se\nnós lembramo-nos\neles lembram-se",
+        "spans": [
+          {
+            "start": 45,
+            "end": 57,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-lembrar-se-past",
+      "english": {
+        "text": "to remember (lembrar-se de)\n— past, finished",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu lembrei-me\ntu lembraste-te\nele lembrou-se\nnós lembrámo-nos\neles lembraram-se",
+        "spans": [
+          {
+            "start": 52,
+            "end": 55,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-lembrar-se-imperfect",
+      "english": {
+        "text": "to remember (lembrar-se de)\n— past, used to / was doing",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "eu lembrava-me\ntu lembravas-te\nele lembrava-se\nnós lembrávamo-nos\neles lembravam-se",
+        "spans": [
+          {
+            "start": 54,
+            "end": 57,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-reuniao",
+      "english": {
+        "text": "the meeting",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a reunião",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-horario",
+      "english": {
+        "text": "the timetable, the opening hours",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o horário",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-predio",
+      "english": {
+        "text": "the building, the block of flats",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o prédio",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-res-do-chao",
+      "english": {
+        "text": "the ground floor",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o rés-do-chão",
+        "spans": [
+          {
+            "start": 0,
+            "end": 13,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-vizinho",
+      "english": {
+        "text": "the neighbour",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o vizinho",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-fatura",
+      "english": {
+        "text": "the invoice",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a fatura",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-recibo",
+      "english": {
+        "text": "the receipt",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o recibo",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-cartao",
+      "english": {
+        "text": "the card (bank card)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o cartão",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-senha",
+      "english": {
+        "text": "the queue ticket, the password",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a senha",
+        "spans": [
+          {
+            "start": 0,
+            "end": 7,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-esquina",
+      "english": {
+        "text": "the street corner",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a esquina",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-cruzamento",
+      "english": {
+        "text": "the crossroads",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o cruzamento",
+        "spans": [
+          {
+            "start": 0,
+            "end": 12,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-entrada",
+      "english": {
+        "text": "the starter, the entrance",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a entrada",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-sobremesa",
+      "english": {
+        "text": "the dessert",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a sobremesa",
+        "spans": [
+          {
+            "start": 0,
+            "end": 11,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-prato-do-dia",
+      "english": {
+        "text": "the dish of the day",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o prato do dia",
+        "spans": [
+          {
+            "start": 0,
+            "end": 14,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-bica",
+      "english": {
+        "text": "the espresso",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a bica",
+        "spans": [
+          {
+            "start": 0,
+            "end": 6,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-copo",
+      "english": {
+        "text": "the glass",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o copo",
+        "spans": [
+          {
+            "start": 0,
+            "end": 6,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-garrafa",
+      "english": {
+        "text": "the bottle",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a garrafa",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-guardanapo",
+      "english": {
+        "text": "the napkin",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o guardanapo",
+        "spans": [
+          {
+            "start": 0,
+            "end": 12,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-tamanho",
+      "english": {
+        "text": "the size",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o tamanho",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-montra",
+      "english": {
+        "text": "the shop window",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a montra",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "pink"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-desconto",
+      "english": {
+        "text": "the discount",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o desconto",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-os-saldos",
+      "english": {
+        "text": "the sales",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "os saldos",
+        "spans": [
+          {
+            "start": 0,
+            "end": 9,
+            "colour": "blue"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-simpatico",
+      "english": {
+        "text": "nice, friendly",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "simpático",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-antipatico",
+      "english": {
+        "text": "unfriendly",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "antipático",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-barulhento",
+      "english": {
+        "text": "noisy",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "barulhento",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-calmo",
+      "english": {
+        "text": "calm, quiet",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "calmo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-doente",
+      "english": {
+        "text": "ill",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "doente",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-saudavel",
+      "english": {
+        "text": "healthy",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "saudável",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-preocupado",
+      "english": {
+        "text": "worried",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "preocupado",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-magro",
+      "english": {
+        "text": "thin",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "magro",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-gordo",
+      "english": {
+        "text": "fat",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "gordo",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-jovem",
+      "english": {
+        "text": "young",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "jovem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-velho",
+      "english": {
+        "text": "old",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "velho",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-forte",
+      "english": {
+        "text": "strong",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "forte",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-fraco",
+      "english": {
+        "text": "weak",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "fraco",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-pode-repetir-se-faz-favor",
+      "english": {
+        "text": "Could you repeat that, please?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Pode repetir, se faz favor?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-pode-falar-mais-devagar",
+      "english": {
+        "text": "Could you speak more slowly?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Pode falar mais devagar?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-nao-percebi",
+      "english": {
+        "text": "I didn't understand",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não percebi",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-como-se-diz-em-portugues",
+      "english": {
+        "text": "How do you say ... in Portuguese?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Como se diz ... em português?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-que-significa-isso",
+      "english": {
+        "text": "What does that mean?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "O que significa isso?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-na-minha-opiniao",
+      "english": {
+        "text": "In my opinion",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Na minha opinião",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-acho-que-sim",
+      "english": {
+        "text": "I think so",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Acho que sim",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-acho-que-nao",
+      "english": {
+        "text": "I don't think so",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Acho que não",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-em-primeiro-lugar",
+      "english": {
+        "text": "Firstly, in the first place",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Em primeiro lugar",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-por-fim",
+      "english": {
+        "text": "Finally, lastly",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Por fim",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-alem-disso",
+      "english": {
+        "text": "Besides, what is more",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Além disso",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-por-isso",
+      "english": {
+        "text": "So, that is why",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Por isso",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-depende",
+      "english": {
+        "text": "It depends",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Depende",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-quanto-custa",
+      "english": {
+        "text": "How much does it cost?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Quanto custa?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-fica-longe-daqui",
+      "english": {
+        "text": "Is it far from here?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Fica longe daqui?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-vire-a-direita",
+      "english": {
+        "text": "Turn right",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vire à direita",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-vire-a-esquerda",
+      "english": {
+        "text": "Turn left",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vire à esquerda",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-siga-sempre-em-frente",
+      "english": {
+        "text": "Keep going straight ahead",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Siga sempre em frente",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-posso-pagar-com-cartao",
+      "english": {
+        "text": "Can I pay by card?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Posso pagar com cartão?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-queria-marcar-uma-consulta",
+      "english": {
+        "text": "I would like to make an appointment",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Queria marcar uma consulta",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-estou-a-procura-de",
+      "english": {
+        "text": "I am looking for",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Estou à procura de",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-tenho-de-ir",
+      "english": {
+        "text": "I have to go",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tenho de ir",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-nao-faz-mal",
+      "english": {
+        "text": "Never mind, it does not matter",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não faz mal",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-apetecer",
+      "english": {
+        "text": "to feel like (apetece-me um café)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "apetecer",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-ter-saudades-de",
+      "english": {
+        "text": "to miss (a person or place)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "ter saudades de",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-ficar-com",
+      "english": {
+        "text": "to keep, to take (I will take it)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "ficar com",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-ir-buscar",
+      "english": {
+        "text": "to go and fetch, to pick up",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "ir buscar",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-dar-se-bem-com",
+      "english": {
+        "text": "to get on well with",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "dar-se bem com",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-tomar-conta-de",
+      "english": {
+        "text": "to look after",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "tomar conta de",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-por-a-mesa",
+      "english": {
+        "text": "to lay the table",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "pôr a mesa",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-fazer-anos",
+      "english": {
+        "text": "to have a birthday",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "fazer anos",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-ter-razao",
+      "english": {
+        "text": "to be right",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "ter razão",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-deitar-fora",
+      "english": {
+        "text": "to throw away",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "deitar fora",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-ha-houve-havia",
+      "english": {
+        "text": "there is / there was / there used to be",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "há / houve / havia",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-semana-passada",
+      "english": {
+        "text": "last week",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "a semana passada",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-no-proximo-mes",
+      "english": {
+        "text": "next month",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "no próximo mês",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-anteontem",
+      "english": {
+        "text": "the day before yesterday",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "anteontem",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-depois-de-amanha",
+      "english": {
+        "text": "the day after tomorrow",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "depois de amanhã",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-de-manha",
+      "english": {
+        "text": "in the morning",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "de manhã",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-tarde",
+      "english": {
+        "text": "in the afternoon",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "à tarde",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-a-noite",
+      "english": {
+        "text": "at night, in the evening",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "à noite",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-o-fim-de-semana",
+      "english": {
+        "text": "the weekend",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "o fim de semana",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-daqui-a-pouco",
+      "english": {
+        "text": "in a little while",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "daqui a pouco",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-assim-que",
+      "english": {
+        "text": "as soon as",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "assim que",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-enquanto",
+      "english": {
+        "text": "while",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "enquanto",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-por-enquanto",
+      "english": {
+        "text": "for now, for the time being",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "por enquanto",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    },
+    {
+      "id": "starter-estar-constipado",
+      "english": {
+        "text": "to have a cold (NOT constipated)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "estar constipado",
+        "spans": [
+          {
+            "start": 6,
+            "end": 16,
+            "colour": "orange"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-04T12:00:00.000Z",
+      "updatedAt": "2026-10-04T12:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-dont-know",
+      "name": "Don't know",
+      "order": 0,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-a-little",
+      "name": "Know a little",
+      "order": 1,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-well",
+      "name": "Know well",
+      "order": 2,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    }
+  ],
+  "colourMeanings": [
+    {
+      "colour": "blue",
+      "label": "Masculine noun"
+    },
+    {
+      "colour": "pink",
+      "label": "Feminine noun"
+    },
+    {
+      "colour": "green",
+      "label": "Verb ending"
+    },
+    {
+      "colour": "orange",
+      "label": "Irregular"
+    },
+    {
+      "colour": "purple",
+      "label": "Stressed syllable"
+    },
+    {
+      "colour": "teal",
+      "label": "Your own use"
+    }
+  ],
+  "deletions": []
+}
