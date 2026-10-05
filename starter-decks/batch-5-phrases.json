@@ -1,0 +1,562 @@
+{
+  "app": "portuguese-flashcards",
+  "exportedAt": "2026-10-05T14:00:00.000Z",
+  "schemaVersion": 2,
+  "cards": [
+    {
+      "id": "phrase-espero-tudo-bem",
+      "english": {
+        "text": "I hope all is well.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Espero que esteja tudo bem.",
+        "spans": [
+          {
+            "start": 11,
+            "end": 17,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-espero-estejas-bem",
+      "english": {
+        "text": "I hope you are well.\n(to a friend)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Espero que estejas bem.",
+        "spans": [
+          {
+            "start": 11,
+            "end": 18,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-espero-corra-bem",
+      "english": {
+        "text": "I hope it all goes well.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Espero que corra tudo bem.",
+        "spans": [
+          {
+            "start": 11,
+            "end": 16,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-noticias-em-breve",
+      "english": {
+        "text": "I hope to hear from you soon.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Espero ter notícias em breve.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-se-houver-tempo",
+      "english": {
+        "text": "If there is time, maybe we can go to the beach.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Se houver tempo, talvez possamos ir à praia.",
+        "spans": [
+          {
+            "start": 3,
+            "end": 9,
+            "colour": "teal"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-quando-chegares",
+      "english": {
+        "text": "When you arrive, send me a message.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Quando chegares, manda-me uma mensagem.",
+        "spans": [
+          {
+            "start": 7,
+            "end": 15,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-se-quiseres-ajudo",
+      "english": {
+        "text": "If you want, I can help you.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Se quiseres, posso ajudar-te.",
+        "spans": [
+          {
+            "start": 3,
+            "end": 11,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-se-precisares",
+      "english": {
+        "text": "Let me know if you need anything.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Diz-me se precisares de alguma coisa.",
+        "spans": [
+          {
+            "start": 10,
+            "end": 20,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-o-que-quiseres",
+      "english": {
+        "text": "Whatever you want.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "O que quiseres.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 14,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-talvez-possamos",
+      "english": {
+        "text": "Maybe we can meet tomorrow.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Talvez possamos encontrar-nos amanhã.",
+        "spans": [
+          {
+            "start": 7,
+            "end": 15,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-e-pena-que",
+      "english": {
+        "text": "It's a shame you can't come.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "É pena que não possas vir.",
+        "spans": [
+          {
+            "start": 15,
+            "end": 21,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-a-tua-espera",
+      "english": {
+        "text": "I am waiting for you at the station.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Estou à tua espera na estação.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 18,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-espero-por-ti",
+      "english": {
+        "text": "I will wait for you outside.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Espero por ti lá fora.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-estou-a-caminho",
+      "english": {
+        "text": "I am on my way.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Estou a caminho.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-chego-daqui-a",
+      "english": {
+        "text": "I will be there in ten minutes.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Chego daqui a dez minutos.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-podia-ajudar-me",
+      "english": {
+        "text": "Could you help me, please?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Podia ajudar-me, se faz favor?",
+        "spans": [
+          {
+            "start": 0,
+            "end": 5,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-gostaria-de-falar",
+      "english": {
+        "text": "I would like to speak to...",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Gostaria de falar com...",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-importa-se-de",
+      "english": {
+        "text": "Would you mind waiting a moment?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Importa-se de esperar um momento?",
+        "spans": [
+          {
+            "start": 0,
+            "end": 10,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-preferia-ficar",
+      "english": {
+        "text": "I would rather stay at home.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Preferia ficar em casa.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 8,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-tanto-quanto-sei",
+      "english": {
+        "text": "As far as I know...",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tanto quanto sei...",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-nao-tenho-a-certeza",
+      "english": {
+        "text": "I am not sure.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não tenho a certeza.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-tanto-faz",
+      "english": {
+        "text": "It's all the same to me.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Para mim, tanto faz.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-como-quiseres",
+      "english": {
+        "text": "It's up to you.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Como quiseres.",
+        "spans": [
+          {
+            "start": 5,
+            "end": 13,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-por-via-das-duvidas",
+      "english": {
+        "text": "Just in case.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Só por via das dúvidas.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-se-eu-fosse-a-ti",
+      "english": {
+        "text": "If I were you, I wouldn't do that.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Se eu fosse a ti, não fazia isso.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 11,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-quem-me-dera",
+      "english": {
+        "text": "I wish I could.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Quem me dera poder.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 12,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-desde-ja-obrigada",
+      "english": {
+        "text": "Thank you in advance.\n(said by a woman)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Desde já, obrigada.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
+      "id": "phrase-desculpe-a-demora",
+      "english": {
+        "text": "Sorry for the delay in replying.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Desculpe a demora na resposta.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-dont-know",
+      "name": "Don't know",
+      "order": 0,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-a-little",
+      "name": "Know a little",
+      "order": 1,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-well",
+      "name": "Know well",
+      "order": 2,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    }
+  ],
+  "colourMeanings": [
+    {
+      "colour": "blue",
+      "label": "Masculine noun"
+    },
+    {
+      "colour": "pink",
+      "label": "Feminine noun"
+    },
+    {
+      "colour": "green",
+      "label": "Verb ending"
+    },
+    {
+      "colour": "orange",
+      "label": "Irregular"
+    },
+    {
+      "colour": "purple",
+      "label": "Stressed syllable"
+    },
+    {
+      "colour": "teal",
+      "label": "Your own use"
+    }
+  ],
+  "deletions": []
+}
