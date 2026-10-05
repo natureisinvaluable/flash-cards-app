@@ -103,6 +103,26 @@
       "updatedAt": "2026-10-05T14:00:00.000Z"
     },
     {
+      "id": "phrase-se-eu-tiver-tempo",
+      "english": {
+        "text": "If I have time, I will call you tomorrow.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Se eu tiver tempo, ligo-te amanhã.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 11,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T14:00:00.000Z",
+      "updatedAt": "2026-10-05T14:00:00.000Z"
+    },
+    {
       "id": "phrase-quando-chegares",
       "english": {
         "text": "When you arrive, send me a message.",

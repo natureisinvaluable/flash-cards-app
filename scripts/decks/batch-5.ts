@@ -44,12 +44,24 @@ export const entries: Entry[] = [
     portuguese: 'Espero ter notícias em breve.',
   },
 
-  /* --------------------------------------------------------- if and when */
+  /* ---------------------------------------------------------- if and when
+   *
+   * `houver` and `tiver` both translate as "if there is / if I have time",
+   * and they are not interchangeable: `houver` comes from the there-is verb
+   * and has no subject, while `tiver` belongs to someone. Both cards are kept
+   * so the difference is visible rather than assumed.
+   */
   {
     id: 'phrase-se-houver-tempo',
     english: 'If there is time, maybe we can go to the beach.',
     portuguese: 'Se houver tempo, talvez possamos ir à praia.',
     highlights: [['houver', 'teal'], ['possamos', 'teal']],
+  },
+  {
+    id: 'phrase-se-eu-tiver-tempo',
+    english: 'If I have time, I will call you tomorrow.',
+    portuguese: 'Se eu tiver tempo, ligo-te amanhã.',
+    highlights: [['tiver', 'teal']],
   },
   {
     id: 'phrase-quando-chegares',
