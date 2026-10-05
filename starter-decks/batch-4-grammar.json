@@ -1,0 +1,717 @@
+{
+  "app": "portuguese-flashcards",
+  "exportedAt": "2026-10-05T12:00:00.000Z",
+  "schemaVersion": 2,
+  "cards": [
+    {
+      "id": "grammar-mqp-cheguei",
+      "english": {
+        "text": "When I arrived, they had already eaten.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Quando cheguei, eles já tinham comido.",
+        "spans": [
+          {
+            "start": 24,
+            "end": 37,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-mqp-lisboa",
+      "english": {
+        "text": "I had never been to Lisbon before.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Eu nunca tinha estado em Lisboa antes.",
+        "spans": [
+          {
+            "start": 9,
+            "end": 21,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-mqp-chaves",
+      "english": {
+        "text": "She said she had lost the keys.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Ela disse que tinha perdido as chaves.",
+        "spans": [
+          {
+            "start": 14,
+            "end": 27,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-mqp-simples",
+      "english": {
+        "text": "He had already left when the letter arrived.\n(formal, written style — one word, no helper verb)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Já partira quando a carta chegou.",
+        "spans": [
+          {
+            "start": 3,
+            "end": 10,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-participios-irregulares",
+      "english": {
+        "text": "the past participles of:\nto do · to say · to see · to put · to open · to write",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "feito · dito · visto · posto · aberto · escrito",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-ppc-comido",
+      "english": {
+        "text": "I have been eating a lot lately.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tenho comido muito ultimamente.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 12,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-ppc-chovido",
+      "english": {
+        "text": "It has been raining all week.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tem chovido toda a semana.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 11,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-ppc-trabalhado",
+      "english": {
+        "text": "We have been working a lot this month.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Temos trabalhado muito este mês.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 16,
+            "colour": "green"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-ppc-contraste",
+      "english": {
+        "text": "I have already eaten.\n(one finished action, not something repeated)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Já comi.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-vi-a",
+      "english": {
+        "text": "I saw her yesterday.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vi-a ontem.",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-nao-a-vi",
+      "english": {
+        "text": "I didn't see her.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não a vi.",
+        "spans": [
+          {
+            "start": 4,
+            "end": 8,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-compra-lo",
+      "english": {
+        "text": "I am going to buy it.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vou comprá-lo.",
+        "spans": [
+          {
+            "start": 10,
+            "end": 13,
+            "colour": "teal"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-convidaram-nos",
+      "english": {
+        "text": "They invited us.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Convidaram-nos.",
+        "spans": [
+          {
+            "start": 10,
+            "end": 14,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-onde-o-compraste",
+      "english": {
+        "text": "Where did you buy it?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Onde o compraste?",
+        "spans": [
+          {
+            "start": 5,
+            "end": 16,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-direto-nao-os-conheco",
+      "english": {
+        "text": "I don't know them.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não os conheço.",
+        "spans": [
+          {
+            "start": 4,
+            "end": 14,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-indireto-dei-lhe",
+      "english": {
+        "text": "I gave him the book.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Dei-lhe o livro.",
+        "spans": [
+          {
+            "start": 3,
+            "end": 7,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-indireto-me-disse",
+      "english": {
+        "text": "She didn't tell me anything.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Ela não me disse nada.",
+        "spans": [
+          {
+            "start": 8,
+            "end": 16,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-indireto-enviar-lhes",
+      "english": {
+        "text": "I am going to send them an email.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vou enviar-lhes um email.",
+        "spans": [
+          {
+            "start": 10,
+            "end": 15,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-indireto-deu-mo",
+      "english": {
+        "text": "He gave it to me.\n(the two pronouns join into one)",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Deu-mo.",
+        "spans": [
+          {
+            "start": 3,
+            "end": 6,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-acabar-de",
+      "english": {
+        "text": "I have just arrived.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Acabei de chegar.",
+        "spans": [
+          {
+            "start": 7,
+            "end": 9,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-acabar-por",
+      "english": {
+        "text": "We ended up staying at home.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Acabámos por ficar em casa.",
+        "spans": [
+          {
+            "start": 9,
+            "end": 12,
+            "colour": "teal"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "colour": "purple"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-acabar-sozinho",
+      "english": {
+        "text": "The film finished late.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "O filme acabou tarde.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-acabar-com",
+      "english": {
+        "text": "She broke up with her boyfriend.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Ela acabou com o namorado.",
+        "spans": [
+          {
+            "start": 11,
+            "end": 14,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tirar-casaco",
+      "english": {
+        "text": "Take off your coat.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tira o casaco.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tirar-fotografia",
+      "english": {
+        "text": "I am going to take a photo.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vou tirar uma fotografia.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-apanhar-autocarro",
+      "english": {
+        "text": "I catch the bus every day.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Apanho o autocarro todos os dias.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-apanhar-constipacao",
+      "english": {
+        "text": "I caught a cold.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Apanhei uma constipação.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-levar-guarda-chuva",
+      "english": {
+        "text": "Take an umbrella with you.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Leva um guarda-chuva contigo.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tomar-medicamento",
+      "english": {
+        "text": "I take this medicine every morning.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Tomo este medicamento todas as manhãs.",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tomar-cafe",
+      "english": {
+        "text": "Shall we have a coffee?",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Vamos tomar um café?",
+        "spans": []
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tao-quente",
+      "english": {
+        "text": "This coffee is so hot.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Este café está tão quente.",
+        "spans": [
+          {
+            "start": 15,
+            "end": 18,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tanta-gente",
+      "english": {
+        "text": "There were so many people.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Havia tanta gente.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 11,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tanto-comi",
+      "english": {
+        "text": "I ate so much.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Comi tanto.",
+        "spans": [
+          {
+            "start": 5,
+            "end": 10,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tao-como",
+      "english": {
+        "text": "She is as tall as her sister.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Ela é tão alta como a irmã.",
+        "spans": [
+          {
+            "start": 6,
+            "end": 9,
+            "colour": "teal"
+          },
+          {
+            "start": 15,
+            "end": 19,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "grammar-tanto-como",
+      "english": {
+        "text": "I don't have as much money as you.",
+        "spans": []
+      },
+      "portuguese": {
+        "text": "Não tenho tanto dinheiro como tu.",
+        "spans": [
+          {
+            "start": 10,
+            "end": 15,
+            "colour": "teal"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "colour": "teal"
+          }
+        ]
+      },
+      "categoryId": "category-dont-know",
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-dont-know",
+      "name": "Don't know",
+      "order": 0,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-a-little",
+      "name": "Know a little",
+      "order": 1,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "category-know-well",
+      "name": "Know well",
+      "order": 2,
+      "createdAt": "2020-01-01T00:00:00.000Z",
+      "updatedAt": "2020-01-01T00:00:00.000Z"
+    }
+  ],
+  "colourMeanings": [
+    {
+      "colour": "blue",
+      "label": "Masculine noun"
+    },
+    {
+      "colour": "pink",
+      "label": "Feminine noun"
+    },
+    {
+      "colour": "green",
+      "label": "Verb ending"
+    },
+    {
+      "colour": "orange",
+      "label": "Irregular"
+    },
+    {
+      "colour": "purple",
+      "label": "Stressed syllable"
+    },
+    {
+      "colour": "teal",
+      "label": "Your own use"
+    }
+  ],
+  "deletions": []
+}
