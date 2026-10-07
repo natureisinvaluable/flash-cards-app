@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Session } from '@supabase/supabase-js'
 import type { Card, CardSide } from '../types'
 import { useLibrary } from '../useLibrary'
@@ -20,6 +20,19 @@ export function Library({ session }: { session: Session }) {
   const [saving, setSaving] = useState(false)
   const [studying, setStudying] = useState(false)
   const [search, setSearch] = useState('')
+
+  /**
+   * Start each screen at the top.
+   *
+   * Without this the browser keeps whatever scroll position the last screen
+   * had. Saving a card leaves you part-way down a list of several hundred,
+   * with the buttons far above - so adding two cards in a row means scrolling
+   * the length of the collection in between.
+   */
+  const view = studying ? 'study' : editing ? 'edit' : 'list'
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [view])
 
   if (library.loading) return <p className="hint">Loading&hellip;</p>
 

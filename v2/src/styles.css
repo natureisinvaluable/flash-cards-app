@@ -350,9 +350,21 @@ button.secondary {
    Card editor
    --------------------------------------------------------------------------- */
 
+/*
+ * The toolbar follows you down the page.
+ *
+ * With several hundred cards, buttons that live only at the top mean a long
+ * scroll back every time you want to add a card, study, or change a setting.
+ */
 .toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   margin-top: 1.75rem;
   margin-bottom: 1.5rem;
+  padding: 0.6rem 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .editor {
