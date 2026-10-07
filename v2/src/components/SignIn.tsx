@@ -76,14 +76,22 @@ export function SignIn() {
     }
 
     if (parsed.kind === 'link') {
+      // Each attempt is recorded separately. Three guesses at this have now
+      // failed, so the next failure needs to say something useful rather than
+      // just "expired" again.
+      const attempts: string[] = []
       for (const type of parsed.typesToTry) {
         const { error } = await supabase.auth.verifyOtp({ token_hash: parsed.tokenHash, type })
         if (!error) {
           setBusy(false)
           return // the app notices the new session and this screen disappears
         }
-        lastError = error.message
+        attempts.push(`${type}: ${error.message}`)
       }
+      // The token's shape, not its value - enough to tell a PKCE token from an
+      // ordinary one, or a truncated paste from a whole one.
+      const shape = `${parsed.tokenHash.length} characters, starts "${parsed.tokenHash.slice(0, 5)}"`
+      lastError = `${attempts.join(' | ')} — token was ${shape}`
     } else {
       const { error } = await supabase.auth.verifyOtp({
         email: email.trim(),
@@ -103,8 +111,8 @@ export function SignIn() {
     // behind friendlier wording sent us hunting for an expiry problem that
     // did not exist.
     setError(
-      `Sign-in failed. The database said: "${lastError}". ` +
-        'If you tapped the link rather than copying it, it has been used up — send yourself a new one.',
+      `Sign-in failed. ${lastError}. ` +
+        'If this keeps happening, use a transfer code instead: sign in in your browser, then Settings → Sign in on another device.',
     )
   }
 

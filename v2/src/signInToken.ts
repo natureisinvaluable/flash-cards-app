@@ -78,13 +78,13 @@ export function parseSignIn(input: string): Parsed {
   }
 
   /**
-   * The link says type=magiclink, but a token_hash is verified as type 'email'
-   * - that is what the documented example does. Passing 'magiclink' is
-   * rejected, and the rejection reads as "invalid or expired", which sends you
-   * looking for an expiry problem that is not there.
+   * Try the type the LINK ITSELF states, first.
    *
-   * Both are returned so the caller can try one and fall back to the other,
-   * rather than this guess being a single point of failure.
+   * An earlier version tried 'email' first, on the strength of a documented
+   * example written for a different flow. That was probably wrong twice over:
+   * a magic link really is type 'magiclink', and if a failed attempt spends
+   * the token then guessing wrongly first destroys it before the right guess
+   * runs. The link is the authority on what it is.
    */
   const rawType = url.searchParams.get('type') ?? 'email'
   const linkType = (EMAIL_TYPES as string[]).includes(rawType)
@@ -92,7 +92,7 @@ export function parseSignIn(input: string): Parsed {
     : 'email'
 
   const typesToTry: EmailOtpType[] =
-    linkType === 'email' ? ['email'] : ['email', linkType]
+    linkType === 'email' ? ['email'] : [linkType, 'email']
 
   return { kind: 'link', tokenHash, typesToTry }
 }
