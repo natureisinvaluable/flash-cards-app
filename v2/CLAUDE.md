@@ -95,6 +95,28 @@ it already holds every card with its colour spans, and v1 can produce one on dem
   see every card as unsorted, which is correct — nobody else has judged them yet.
 - Import is a one-off run by the owner, not a feature every user needs. Keep it out of the way.
 
+## Signing in on a phone home screen app
+
+An app added to an iPhone home screen gets **its own storage, separate from the
+browser**. Signing in in Safari therefore does not sign in the home screen app, and the app has no
+address bar to paste a link into.
+
+What is actually known, after several wrong turns:
+
+- **A session transfers fine.** `setSession` with a code copied from an already signed-in browser
+  works, and the home screen app keeps it. So storage is not the problem and never was.
+- **Verifying a pasted email link has never worked there**, failing with "invalid or has expired"
+  on a link seconds old. Causes ruled out: PKCE (the client reports `flowType: 'implicit'`), and
+  the home screen app's ability to hold a session. The type passed to `verifyOtp` was wrong for a
+  while — it should be the type the link itself states, normally `magiclink` — but whether that
+  was the whole cause is **unproven**, because the working route was found first.
+- **Email templates cannot be customised** on this project, so a six-digit code is not available
+  without configuring a separate email provider. That would also lift the default service's limit
+  of a couple of emails an hour, which was hit during this debugging.
+
+So: **the transfer code is the supported route for a home screen app.** Do not remove it in favour
+of a cleverer token fix without testing on a real iPhone home screen app first.
+
 ## Development rules
 
 - **Never modify anything outside `v2/`** except the deployment workflow. v1 is in daily use.

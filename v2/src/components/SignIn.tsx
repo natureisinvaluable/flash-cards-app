@@ -131,7 +131,7 @@ export function SignIn() {
 
         <div className="field">
           <label className="field-label" htmlFor="code">
-            On a phone: paste the link here instead
+            On a phone: paste a transfer code or the link here
           </label>
           <input
             id="code"
@@ -146,15 +146,17 @@ export function SignIn() {
             onChange={(event) => setCode(event.target.value)}
           />
           <p className="hint">
-            <strong>Press and hold</strong> the link in the email and choose{' '}
-            <strong>Copy Link</strong> &mdash; do not tap it. Tapping opens it in
-            your browser, which signs in your browser rather than this app, and
-            uses the link up.
+            <strong>If you opened this from a home screen icon, use a transfer
+            code.</strong> Sign in in your browser first, then open Settings
+            there and choose &ldquo;Sign in on another device&rdquo;. A home
+            screen app keeps its own separate storage, so signing in in the
+            browser does not reach it &mdash; and email links have proved
+            unreliable here.
           </p>
           <p className="hint">
-            This box also accepts a <strong>transfer code</strong>. If you are
-            already signed in in your browser, open Settings there and use
-            &ldquo;Sign in on another device&rdquo;.
+            Otherwise you can paste the email link. <strong>Press and hold</strong>{' '}
+            it and choose <strong>Copy Link</strong> rather than tapping it &mdash;
+            tapping signs in your browser and uses the link up.
           </p>
         </div>
 
